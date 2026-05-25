@@ -1,0 +1,1277 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Nexus eVentures Corporation — Gulf's #1 Brand Launch Partner</title>
+<meta name="description" content="Launch your brand on Amazon UAE, KSA & Noon with zero upfront cost. Nexus eVentures Corporation — the Gulf's trusted brand distribution partner."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Outfit:wght@300;400;500;600;700&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet"/>
+<style>
+/* ── RESET ── */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --navy:#0A1F44;
+  --navy-d:#060f1f;
+  --navy-m:#081730;
+  --gold:#C49A2A;
+  --gold-l:#e8b93a;
+  --gold-pale:rgba(196,154,42,0.10);
+  --royal:#1A4C8B;
+  --grey:#F2F4F7;
+  --dark:#2C2C2C;
+  --green:#1A7A4A;
+  --white:#FFFFFF;
+  --glass:rgba(255,255,255,0.048);
+  --gborder:rgba(196,154,42,0.20);
+  --t:.38s cubic-bezier(.4,0,.2,1);
+  --ff-head:'Cormorant Garamond',Georgia,serif;
+  --ff-body:'Outfit',sans-serif;
+  --ff-ar:'Tajawal',sans-serif;
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--ff-body);background:var(--navy);color:var(--white);overflow-x:hidden;line-height:1.7}
+[dir=rtl]{font-family:var(--ff-ar)}
+a{text-decoration:none;color:inherit}
+ul{list-style:none}
+button{cursor:pointer;border:none;outline:none;background:none;font-family:inherit;color:inherit}
+img{max-width:100%;display:block}
+::-webkit-scrollbar{width:4px}
+::-webkit-scrollbar-track{background:var(--navy-d)}
+::-webkit-scrollbar-thumb{background:var(--gold);border-radius:2px}
+
+/* ── UTILITIES ── */
+.container{max-width:1200px;margin:0 auto;padding:0 1.75rem}
+.section{padding:6rem 0}
+.section--light{background:#fff}
+.section--grey{background:var(--grey)}
+.section--dark{background:var(--navy-d)}
+.section--mid{background:var(--navy-m)}
+
+/* Tags */
+.tag{display:inline-flex;align-items:center;gap:.5rem;padding:.3rem 1rem;border:1px solid rgba(196,154,42,.3);background:rgba(196,154,42,.08);border-radius:50px;font-size:.7rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem}
+.tag::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--gold);flex-shrink:0}
+
+/* Headings */
+.h1{font-family:var(--ff-head);font-weight:700;font-size:clamp(2.8rem,6vw,5.5rem);line-height:1.05;letter-spacing:-.02em}
+.h2{font-family:var(--ff-head);font-weight:700;font-size:clamp(2rem,4vw,3.2rem);line-height:1.12;letter-spacing:-.01em}
+.h2--dark{color:var(--navy)}
+.h2--royal{color:var(--royal)}
+.gold-word{background:linear-gradient(120deg,var(--gold) 20%,var(--gold-l) 80%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.divider{width:48px;height:2px;background:linear-gradient(90deg,var(--gold),transparent);border-radius:2px;margin:1rem 0 1.5rem}
+.divider--center{margin-left:auto;margin-right:auto}
+.sub{font-size:1.05rem;color:rgba(255,255,255,.6);line-height:1.8;max-width:560px}
+.sub--dark{color:rgba(44,44,44,.7)}
+.sub--center{margin-left:auto;margin-right:auto;text-align:center}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;gap:.55rem;padding:.82rem 1.9rem;border-radius:6px;font-weight:600;font-size:.92rem;letter-spacing:.01em;transition:var(--t);white-space:nowrap}
+.btn-gold{background:linear-gradient(135deg,#b8891e,var(--gold-l));color:#fff;box-shadow:0 4px 20px rgba(196,154,42,.3)}
+.btn-gold:hover{transform:translateY(-2px);box-shadow:0 10px 35px rgba(196,154,42,.5);filter:brightness(1.1)}
+.btn-outline{border:1.5px solid rgba(255,255,255,.3);color:rgba(255,255,255,.9)}
+.btn-outline:hover{border-color:var(--gold);color:var(--gold);background:rgba(196,154,42,.06)}
+.btn-navy{background:var(--navy);color:var(--white);border:1.5px solid rgba(255,255,255,.12)}
+.btn-navy:hover{background:#0c2650;transform:translateY(-2px)}
+
+/* Animations */
+@keyframes fadeUp{from{opacity:0;transform:translateY(32px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+@keyframes pulseWA{0%,100%{box-shadow:0 4px 20px rgba(37,211,102,.4)}50%{box-shadow:0 4px 45px rgba(37,211,102,.7),0 0 0 10px rgba(37,211,102,.08)}}
+@keyframes marqueeScroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@keyframes glowPulse{0%,100%{opacity:.55}50%{opacity:1}}
+@keyframes spinSlow{to{transform:rotate(360deg)}}
+@keyframes shimmer{0%{background-position:-200% center}100%{background-position:200% center}}
+@keyframes particleRise{from{opacity:0;transform:translateY(0)}10%{opacity:.9}85%{opacity:.4}to{opacity:0;transform:translateY(-100vh)}}
+
+/* Scroll reveals */
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .75s ease,transform .75s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.reveal-l{opacity:0;transform:translateX(-35px);transition:opacity .75s ease,transform .75s ease}
+.reveal-l.visible{opacity:1;transform:translateX(0)}
+.reveal-r{opacity:0;transform:translateX(35px);transition:opacity .75s ease,transform .75s ease}
+.reveal-r.visible{opacity:1;transform:translateX(0)}
+.reveal-s{opacity:0;transform:scale(.94);transition:opacity .65s ease,transform .65s ease}
+.reveal-s.visible{opacity:1;transform:scale(1)}
+[data-delay="1"]{transition-delay:.1s}
+[data-delay="2"]{transition-delay:.2s}
+[data-delay="3"]{transition-delay:.3s}
+[data-delay="4"]{transition-delay:.4s}
+[data-delay="5"]{transition-delay:.5s}
+[data-delay="6"]{transition-delay:.6s}
+
+/* ── PARTICLES ── */
+.particles{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:1}
+.particle{position:absolute;bottom:-4px;border-radius:50%;background:var(--gold);opacity:0;animation:particleRise linear infinite}
+
+/* ── NAVBAR ── */
+.nav{position:fixed;top:0;left:0;right:0;z-index:900;padding:1.2rem 2rem;display:flex;align-items:center;justify-content:space-between;transition:background .4s,padding .4s,box-shadow .4s}
+.nav.stuck{background:rgba(6,15,31,.95);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--gborder);padding:.85rem 2rem;box-shadow:0 2px 30px rgba(0,0,0,.4)}
+.nav-logo{display:flex;align-items:center;gap:.7rem}
+.nav-logo-mark{width:38px;height:38px;border-radius:8px;background:linear-gradient(135deg,#b8891e,var(--gold-l));display:flex;align-items:center;justify-content:center;box-shadow:0 0 18px rgba(196,154,42,.35)}
+.nav-logo-mark svg{width:20px;height:20px}
+.nav-wordmark{font-family:var(--ff-head);font-weight:700;font-size:1.1rem;color:var(--white);letter-spacing:-.01em}
+.nav-wordmark span{color:var(--gold)}
+.nav-links{display:flex;align-items:center;gap:.05rem}
+.nav-links a{padding:.5rem .85rem;font-size:.86rem;font-weight:500;color:rgba(255,255,255,.75);border-radius:5px;position:relative;transition:color .3s}
+.nav-links a::after{content:'';position:absolute;bottom:0;left:50%;width:0;height:1.5px;background:var(--gold);border-radius:1px;transition:width .3s,left .3s}
+.nav-links a:hover{color:#fff}
+.nav-links a:hover::after{width:55%;left:22.5%}
+.nav-r{display:flex;align-items:center;gap:.65rem}
+.lang-btn{padding:.3rem .75rem;border-radius:20px;border:1px solid rgba(196,154,42,.3);background:rgba(196,154,42,.07);font-size:.75rem;font-weight:700;color:var(--gold);letter-spacing:.04em;transition:var(--t)}
+.lang-btn:hover{background:rgba(196,154,42,.18)}
+.hamburger{display:none;flex-direction:column;gap:5px;padding:4px}
+.hamburger span{display:block;width:22px;height:2px;background:#fff;border-radius:1px;transition:var(--t)}
+.hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.hamburger.open span:nth-child(2){opacity:0}
+.hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.65);z-index:799}
+.overlay.open{display:block}
+.drawer{position:fixed;top:0;right:-100%;bottom:0;width:min(300px,82vw);background:rgba(5,14,32,.98);backdrop-filter:blur(24px);padding:5.5rem 1.5rem 2rem;display:flex;flex-direction:column;gap:.35rem;border-left:1px solid var(--gborder);z-index:800;transition:right .4s cubic-bezier(.4,0,.2,1)}
+[dir=rtl] .drawer{right:auto;left:-100%;border-left:none;border-right:1px solid var(--gborder);transition:left .4s cubic-bezier(.4,0,.2,1)}
+.drawer.open{right:0}
+[dir=rtl] .drawer.open{left:0;right:auto}
+.drawer a{display:block;padding:.9rem 1rem;font-size:1rem;font-weight:500;color:rgba(255,255,255,.8);border-radius:8px;border-bottom:1px solid rgba(255,255,255,.04);transition:var(--t)}
+.drawer a:hover{color:var(--gold);background:rgba(196,154,42,.07)}
+
+/* ── WHATSAPP ── */
+.wa{position:fixed;bottom:1.75rem;right:1.75rem;z-index:700;width:54px;height:54px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;animation:pulseWA 2.5s infinite;transition:transform .3s}
+.wa:hover{transform:scale(1.12);animation:none;box-shadow:0 6px 30px rgba(37,211,102,.7)}
+.wa svg{width:27px;height:27px}
+[dir=rtl] .wa{right:auto;left:1.75rem}
+
+/* ── HERO ── */
+.hero{min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden;background:var(--navy-d)}
+.hero-bg{position:absolute;inset:0;z-index:0}
+.hero-bg img{width:100%;height:100%;object-fit:cover;opacity:.25;filter:saturate(1.2)}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(160deg,rgba(4,10,24,.9) 0%,rgba(10,31,68,.85) 50%,rgba(4,15,35,.92) 100%);z-index:1}
+.hero-glow{position:absolute;top:-20%;left:-10%;width:70vw;height:70vw;max-width:750px;max-height:750px;background:radial-gradient(circle,rgba(196,154,42,.1) 0%,transparent 65%);pointer-events:none;z-index:2;animation:glowPulse 7s ease-in-out infinite}
+.hero-glow-b{position:absolute;bottom:-15%;right:-8%;width:55vw;height:55vw;max-width:600px;max-height:600px;background:radial-gradient(circle,rgba(26,76,139,.2) 0%,transparent 65%);pointer-events:none;z-index:2;animation:glowPulse 9s ease-in-out infinite reverse}
+.hero-content{position:relative;z-index:3;max-width:1200px;margin:0 auto;padding:8rem 1.75rem 5rem;width:100%;display:grid;grid-template-columns:1.1fr .9fr;gap:4rem;align-items:center}
+.hero-badge{display:inline-flex;align-items:center;gap:.5rem;padding:.38rem 1rem;border:1px solid rgba(196,154,42,.35);background:rgba(196,154,42,.08);border-radius:50px;font-size:.72rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:1.6rem;animation:fadeUp .8s .1s both}
+.hero-badge-dot{width:6px;height:6px;border-radius:50%;background:var(--gold);animation:glowPulse 1.8s infinite}
+.hero h1{font-family:var(--ff-head);font-weight:700;font-size:clamp(2.6rem,5.5vw,5rem);line-height:1.06;letter-spacing:-.02em;margin-bottom:1.5rem;animation:fadeUp .8s .22s both}
+.hero-sub{font-size:clamp(1rem,1.6vw,1.15rem);color:rgba(255,255,255,.65);line-height:1.8;max-width:520px;margin-bottom:2.5rem;animation:fadeUp .8s .36s both}
+.hero-btns{display:flex;gap:.85rem;flex-wrap:wrap;margin-bottom:2.5rem;animation:fadeUp .8s .48s both}
+.trust-pill{display:inline-flex;align-items:center;gap:.8rem;padding:.7rem 1.2rem;background:rgba(255,255,255,.04);border:1px solid rgba(196,154,42,.15);border-radius:10px;backdrop-filter:blur(12px);animation:fadeUp .8s .6s both}
+.trust-avatars{display:flex}
+.trust-avatars span{width:26px;height:26px;border-radius:50%;border:2px solid rgba(10,31,68,.8);display:flex;align-items:center;justify-content:center;font-size:.64rem;font-weight:700;margin-left:-7px}
+.trust-avatars span:first-child{margin-left:0}
+.trust-avatars span:nth-child(1){background:#f59e0b;color:#fff}
+.trust-avatars span:nth-child(2){background:#10b981;color:#fff}
+.trust-avatars span:nth-child(3){background:#3b82f6;color:#fff}
+.trust-pill p{font-size:.8rem;color:rgba(255,255,255,.65)}
+.trust-pill strong{color:#fff}
+/* Hero visual card */
+.hero-visual{animation:fadeIn .9s .4s both;position:relative}
+.hero-card{background:linear-gradient(145deg,rgba(255,255,255,.06),rgba(255,255,255,.02));border:1px solid rgba(196,154,42,.18);border-radius:20px;overflow:hidden;position:relative}
+.hero-img-wrap{height:360px;overflow:hidden;position:relative}
+.hero-img-wrap img{width:100%;height:100%;object-fit:cover;filter:saturate(1.1)}
+.hero-img-wrap::after{content:'';position:absolute;inset:0;background:linear-gradient(0deg,rgba(10,31,68,.8) 0%,transparent 55%)}
+.hero-card-body{padding:1.5rem}
+.hero-card-stats{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1rem}
+.hcs{text-align:center;padding:.6rem .4rem;background:rgba(255,255,255,.04);border-radius:8px;border:1px solid rgba(196,154,42,.12)}
+.hcs-num{font-family:var(--ff-head);font-size:1.5rem;font-weight:700;color:var(--gold-l);line-height:1}
+.hcs-lbl{font-size:.68rem;color:rgba(255,255,255,.5);margin-top:.25rem;line-height:1.3}
+.hero-float-badge{position:absolute;top:1.4rem;right:-1rem;padding:.75rem 1.1rem;background:linear-gradient(135deg,var(--gold),var(--gold-l));border-radius:12px;box-shadow:0 8px 25px rgba(196,154,42,.45);text-align:center}
+.hero-float-badge strong{display:block;font-family:var(--ff-head);font-size:1.4rem;font-weight:700;color:var(--navy);line-height:1}
+.hero-float-badge span{font-size:.64rem;font-weight:700;color:rgba(10,31,68,.75);letter-spacing:.05em;text-transform:uppercase}
+
+/* ── MARQUEE LOGOS ── */
+.marquee-section{background:rgba(255,255,255,.028);border-top:1px solid rgba(196,154,42,.1);border-bottom:1px solid rgba(196,154,42,.1);padding:1.5rem 0;overflow:hidden}
+.marquee-track{display:flex;gap:0;width:max-content;animation:marqueeScroll 28s linear infinite}
+.marquee-section:hover .marquee-track{animation-play-state:paused}
+.marquee-item{display:flex;align-items:center;gap:.6rem;padding:0 2.5rem;border-right:1px solid rgba(255,255,255,.07);white-space:nowrap;font-size:.8rem;font-weight:600;color:rgba(255,255,255,.4);letter-spacing:.06em;text-transform:uppercase}
+.marquee-item svg{width:16px;height:16px;opacity:.4}
+
+/* ── STATS ── */
+.stats-section{background:var(--navy-d);padding:3.5rem 0}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem}
+.stat-card{padding:2.2rem 1.6rem;text-align:center;background:rgba(255,255,255,.038);border:1px solid rgba(196,154,42,.15);border-radius:16px;position:relative;overflow:hidden;transition:border-color .3s,transform .3s,box-shadow .3s;cursor:default}
+.stat-card::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(196,154,42,.06),transparent);border-radius:16px}
+.stat-card:hover{border-color:rgba(196,154,42,.45);transform:translateY(-5px);box-shadow:0 14px 45px rgba(196,154,42,.15)}
+.stat-num{font-family:var(--ff-head);font-weight:700;font-size:2.8rem;line-height:1;background:linear-gradient(135deg,var(--gold) 20%,var(--gold-l) 80%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:.4rem}
+.stat-lbl{font-size:.84rem;color:rgba(255,255,255,.5);font-weight:400;line-height:1.5}
+
+/* ── ABOUT ── */
+.about-split{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
+.about-img{border-radius:20px;overflow:hidden;position:relative;aspect-ratio:4/3}
+.about-img img{width:100%;height:100%;object-fit:cover}
+.about-img::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(10,31,68,.7))}
+.about-badge{position:absolute;bottom:-1rem;left:-1rem;padding:1.1rem 1.4rem;background:linear-gradient(135deg,var(--gold),var(--gold-l));border-radius:14px;text-align:center;box-shadow:0 8px 28px rgba(196,154,42,.4)}
+.about-badge strong{display:block;font-family:var(--ff-head);font-size:2rem;font-weight:700;color:var(--navy);line-height:1}
+.about-badge span{font-size:.65rem;font-weight:700;color:rgba(10,31,68,.7);text-transform:uppercase;letter-spacing:.05em}
+.check-list{display:flex;flex-direction:column;gap:.85rem;margin-top:1.6rem}
+.check-item{display:flex;align-items:flex-start;gap:.75rem;font-size:.9rem;color:rgba(255,255,255,.68)}
+.check-dot{flex-shrink:0;margin-top:.32rem;width:8px;height:8px;border-radius:50%;background:var(--gold)}
+
+/* ── WHAT WE DO ── */
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3.5rem}
+.svc-card{padding:2.4rem 2rem;background:rgba(255,255,255,.04);border:1px solid rgba(196,154,42,.14);border-radius:18px;transition:var(--t);position:relative;overflow:hidden;cursor:default}
+.svc-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent);opacity:0;transition:opacity .35s}
+.svc-card:hover{border-color:rgba(196,154,42,.4);transform:translateY(-6px);box-shadow:0 20px 55px rgba(196,154,42,.14)}
+.svc-card:hover::before{opacity:1}
+.svc-icon{width:52px;height:52px;border-radius:12px;background:linear-gradient(135deg,rgba(196,154,42,.15),rgba(196,154,42,.04));border:1px solid rgba(196,154,42,.25);display:flex;align-items:center;justify-content:center;margin-bottom:1.2rem}
+.svc-icon svg{width:24px;height:24px;stroke:var(--gold);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.svc-card h3{font-size:1.1rem;font-weight:600;margin-bottom:.75rem;color:#fff}
+.svc-card p{font-size:.88rem;color:rgba(255,255,255,.55);line-height:1.7}
+
+/* ── WHY US ── */
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-top:3rem}
+.why-card{padding:1.8rem;background:#fff;border-radius:14px;border:1.5px solid rgba(26,76,139,.08);transition:var(--t);cursor:default}
+.why-card:hover{border-color:var(--gold);transform:translateY(-4px);box-shadow:0 14px 40px rgba(196,154,42,.14)}
+.why-ico{width:44px;height:44px;border-radius:10px;background:linear-gradient(135deg,rgba(196,154,42,.15),rgba(196,154,42,.04));border:1px solid rgba(196,154,42,.2);display:flex;align-items:center;justify-content:center;margin-bottom:1rem}
+.why-ico svg{width:20px;height:20px;stroke:var(--gold);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.why-card h3{font-size:.95rem;font-weight:600;color:var(--navy);margin-bottom:.5rem}
+.why-card p{font-size:.83rem;color:rgba(44,44,44,.65);line-height:1.65}
+
+/* ── HOW IT WORKS (timeline) ── */
+.timeline{position:relative;margin-top:3.5rem}
+.tl-line{position:absolute;left:28px;top:0;bottom:0;width:2px;background:linear-gradient(180deg,var(--gold),rgba(196,154,42,.15));z-index:0}
+[dir=rtl] .tl-line{left:auto;right:28px}
+.tl-item{display:flex;gap:2rem;margin-bottom:2.5rem;position:relative;z-index:1}
+.tl-step{flex-shrink:0;width:58px;height:58px;border-radius:50%;background:linear-gradient(135deg,#b8891e,var(--gold-l));border:2.5px solid rgba(10,31,68,.4);display:flex;align-items:center;justify-content:center;font-family:var(--ff-head);font-weight:700;font-size:1.2rem;color:var(--navy);box-shadow:0 0 0 6px rgba(196,154,42,.1),0 6px 20px rgba(196,154,42,.3)}
+.tl-body{padding-top:.5rem}
+.tl-body h3{font-size:1rem;font-weight:600;margin-bottom:.4rem;color:#fff}
+.tl-body p{font-size:.87rem;color:rgba(255,255,255,.55);line-height:1.7}
+.tl-phase-badge{display:inline-block;padding:.22rem .75rem;border-radius:20px;font-size:.68rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-bottom:1.6rem;border:1px solid;opacity:.9}
+.tl-phase-badge.ph1{border-color:rgba(196,154,42,.4);background:rgba(196,154,42,.1);color:var(--gold)}
+.tl-phase-badge.ph2{border-color:rgba(26,122,74,.4);background:rgba(26,122,74,.1);color:#4ade80}
+
+/* ── BRANDS (logo wall) ── */
+.brands-marquee{overflow:hidden;position:relative;margin-top:2.5rem}
+.brands-marquee::before,.brands-marquee::after{content:'';position:absolute;top:0;bottom:0;width:100px;z-index:2;pointer-events:none}
+.brands-marquee::before{left:0;background:linear-gradient(90deg,var(--navy-d),transparent)}
+.brands-marquee::after{right:0;background:linear-gradient(270deg,var(--navy-d),transparent)}
+.brands-track{display:flex;gap:0;width:max-content;animation:marqueeScroll 30s linear infinite}
+.brands-marquee:hover .brands-track{animation-play-state:paused}
+.brand-chip{padding:.8rem 2rem;margin:0 .3rem;background:rgba(255,255,255,.04);border:1px solid rgba(196,154,42,.13);border-radius:8px;font-size:.85rem;font-weight:600;color:rgba(255,255,255,.55);white-space:nowrap;transition:var(--t);cursor:default;display:flex;align-items:center;gap:.6rem}
+.brand-chip:hover{border-color:rgba(196,154,42,.4);color:rgba(255,255,255,.85);background:rgba(196,154,42,.07)}
+.brand-flag{font-size:.9rem}
+.brand-cats-note{text-align:center;margin-top:1.8rem;font-size:.84rem;color:rgba(255,255,255,.38);font-style:italic}
+
+/* ── PLATFORMS ── */
+.plat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem;margin-top:3rem}
+.plat-card{padding:2.2rem 1.5rem;background:#fff;border-radius:16px;text-align:center;border:1.5px solid rgba(26,76,139,.08);transition:var(--t);cursor:default;position:relative;overflow:hidden}
+.plat-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--gold),var(--gold-l));transform:scaleX(0);transform-origin:left;transition:transform .35s}
+.plat-card:hover{transform:translateY(-5px);box-shadow:0 16px 45px rgba(0,0,0,.12)}
+.plat-card:hover::before{transform:scaleX(1)}
+.plat-emoji{font-size:2.2rem;margin-bottom:.8rem}
+.plat-card h3{font-size:1rem;font-weight:700;color:var(--navy);margin-bottom:.4rem}
+.plat-card p{font-size:.8rem;color:rgba(44,44,44,.6);line-height:1.5}
+.plat-flag-line{margin-top:.9rem;font-size:.75rem;font-weight:600;color:var(--royal);letter-spacing:.04em;text-transform:uppercase}
+
+/* ── TESTIMONIALS ── */
+.t-outer{overflow:hidden;position:relative;margin-top:3rem}
+.t-track{display:flex;transition:transform .6s cubic-bezier(.4,0,.2,1)}
+.t-slide{flex:0 0 100%;padding:0 .5rem}
+.t-card{background:rgba(255,255,255,.05);border:1px solid rgba(196,154,42,.18);border-radius:20px;padding:2.5rem 2rem;position:relative;overflow:hidden}
+.t-card::before{content:'"';position:absolute;top:-1rem;right:1.5rem;font-family:var(--ff-head);font-size:8rem;color:rgba(196,154,42,.08);line-height:1;pointer-events:none}
+.t-stars{color:var(--gold);font-size:1.1rem;letter-spacing:.1em;margin-bottom:1.2rem}
+.t-quote{font-size:1.05rem;color:rgba(255,255,255,.82);line-height:1.75;margin-bottom:1.8rem;font-style:italic}
+.t-author{display:flex;align-items:center;gap:1rem}
+.t-avatar{width:48px;height:48px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.9rem;flex-shrink:0}
+.t-name{font-weight:600;font-size:.92rem;color:#fff}
+.t-role{font-size:.8rem;color:rgba(255,255,255,.45);margin-top:.15rem}
+.slider-nav{display:flex;align-items:center;justify-content:center;gap:1.2rem;margin-top:1.8rem}
+.s-btn{width:40px;height:40px;border-radius:50%;border:1.5px solid rgba(196,154,42,.3);display:flex;align-items:center;justify-content:center;transition:var(--t)}
+.s-btn:hover{border-color:var(--gold);background:rgba(196,154,42,.1)}
+.s-btn svg{width:18px;height:18px;stroke:var(--gold);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.dots{display:flex;gap:.5rem}
+.dot{width:7px;height:7px;border-radius:50%;background:rgba(196,154,42,.28);transition:var(--t);cursor:pointer}
+.dot.on{width:22px;border-radius:4px;background:var(--gold)}
+
+/* ── FAQ ── */
+.faq-wrap{max-width:760px;margin:2.5rem auto 0}
+.faq-item{border-bottom:1px solid rgba(255,255,255,.07);overflow:hidden}
+.faq-q{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:1.3rem .3rem;cursor:pointer;font-size:.95rem;font-weight:500;color:rgba(255,255,255,.82);transition:color .3s}
+.faq-q:hover{color:#fff}
+.faq-ico{flex-shrink:0;width:28px;height:28px;border-radius:50%;border:1px solid rgba(196,154,42,.28);display:flex;align-items:center;justify-content:center;transition:var(--t)}
+.faq-ico svg{width:14px;height:14px;stroke:var(--gold);fill:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;transition:transform .35s}
+.faq-item.on .faq-q{color:var(--gold-l)}
+.faq-item.on .faq-ico{background:rgba(196,154,42,.12)}
+.faq-item.on .faq-ico svg{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .4s cubic-bezier(.4,0,.2,1)}
+.faq-item.on .faq-a{max-height:300px}
+.faq-a-inner{padding:.3rem .3rem 1.4rem;font-size:.9rem;color:rgba(255,255,255,.55);line-height:1.75}
+
+/* ── CTA BANNER ── */
+.cta-section{position:relative;padding:7rem 0;text-align:center;overflow:hidden;background:linear-gradient(135deg,#05101f 0%,#0a1e42 50%,#060d1c 100%)}
+.cta-section::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23C49A2A' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")}
+.cta-glow{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:500px;height:500px;background:radial-gradient(circle,rgba(196,154,42,.15) 0%,transparent 70%);pointer-events:none;animation:glowPulse 5s ease-in-out infinite}
+.cta-section .container{position:relative;z-index:1}
+.cta-chips{display:flex;justify-content:center;flex-wrap:wrap;gap:.6rem;margin-bottom:2.5rem;margin-top:2rem}
+.cta-chip{padding:.35rem .85rem;background:rgba(196,154,42,.1);border:1px solid rgba(196,154,42,.25);border-radius:20px;font-size:.75rem;font-weight:600;color:var(--gold);display:flex;align-items:center;gap:.4rem}
+.cta-chip::before{content:'✓';color:var(--green)}
+
+/* ── CONTACT ── */
+.contact-grid{display:grid;grid-template-columns:1fr 1.5fr;gap:4rem;align-items:start;margin-top:3rem}
+.c-info-card{display:flex;align-items:flex-start;gap:1rem;padding:1.2rem;border-radius:12px;border:1px solid rgba(26,76,139,.12);background:rgba(26,76,139,.04);margin-bottom:1rem;transition:var(--t)}
+.c-info-card:hover{border-color:rgba(196,154,42,.3);background:rgba(196,154,42,.04)}
+.c-ico{width:40px;height:40px;border-radius:9px;background:linear-gradient(135deg,rgba(26,76,139,.15),rgba(26,76,139,.05));border:1px solid rgba(26,76,139,.2);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.c-ico svg{width:18px;height:18px;stroke:var(--royal);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.c-info-card h4{font-size:.82rem;font-weight:700;color:var(--navy);text-transform:uppercase;letter-spacing:.06em;margin-bottom:.2rem}
+.c-info-card p{font-size:.87rem;color:rgba(44,44,44,.7)}
+
+/* Form */
+.form-card{background:#fff;border-radius:20px;padding:2.5rem;box-shadow:0 8px 40px rgba(0,0,0,.1)}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.fg{margin-bottom:1rem}
+.fg label{display:block;font-size:.78rem;font-weight:600;color:var(--navy);text-transform:uppercase;letter-spacing:.06em;margin-bottom:.4rem}
+.fg input,.fg select,.fg textarea{width:100%;padding:.78rem 1rem;background:#f8f9fc;border:1.5px solid #e2e6ef;border-radius:8px;font-size:.9rem;font-family:var(--ff-body);color:var(--dark);transition:border-color .3s,box-shadow .3s;outline:none;appearance:none}
+.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(196,154,42,.1);background:#fff}
+.fg textarea{min-height:100px;resize:vertical}
+.form-checkboxes{display:grid;grid-template-columns:repeat(3,1fr);gap:.5rem;margin-top:.4rem}
+.form-checkboxes label{display:flex;align-items:center;gap:.4rem;font-size:.82rem;color:var(--dark);cursor:pointer;font-weight:400;text-transform:none;letter-spacing:0}
+.form-checkboxes input[type=checkbox]{width:14px;height:14px;accent-color:var(--gold);flex-shrink:0}
+
+/* ── FOOTER ── */
+.footer{background:#020b18;border-top:1px solid rgba(196,154,42,.12);padding:4.5rem 0 0}
+.footer-grid{display:grid;grid-template-columns:2.2fr 1fr 1fr 1fr;gap:3rem;padding-bottom:3rem;border-bottom:1px solid rgba(255,255,255,.05)}
+.footer-about .logo-text{font-family:var(--ff-head);font-weight:700;font-size:1.15rem;color:#fff;display:block;margin-bottom:.9rem;letter-spacing:-.01em}
+.footer-about .logo-text span{color:var(--gold)}
+.footer-about p{font-size:.85rem;color:rgba(255,255,255,.38);line-height:1.7;max-width:280px}
+.footer-socials{display:flex;gap:.5rem;margin-top:1.2rem}
+.f-social{width:33px;height:33px;border-radius:7px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;transition:var(--t)}
+.f-social:hover{border-color:var(--gold);background:rgba(196,154,42,.12)}
+.f-social svg{width:15px;height:15px;stroke:rgba(255,255,255,.45);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.footer-col h4{font-size:.75rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:1.1rem}
+.footer-col a{display:block;font-size:.85rem;color:rgba(255,255,255,.38);margin-bottom:.55rem;transition:color .3s}
+.footer-col a:hover{color:rgba(255,255,255,.8)}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center;padding:1.5rem 0;flex-wrap:wrap;gap:.7rem}
+.footer-bottom p{font-size:.78rem;color:rgba(255,255,255,.25)}
+.footer-legal{display:flex;gap:1.2rem}
+.footer-legal a{font-size:.78rem;color:rgba(255,255,255,.25);transition:color .3s}
+.footer-legal a:hover{color:var(--gold)}
+
+/* ── RESPONSIVE ── */
+@media(max-width:1000px){
+  .hero-content{grid-template-columns:1fr;padding-top:7rem}
+  .hero-visual{display:none}
+  .about-split{grid-template-columns:1fr;gap:2.5rem}
+  .services-grid{grid-template-columns:1fr 1fr}
+  .why-grid{grid-template-columns:1fr 1fr}
+  .plat-grid{grid-template-columns:1fr 1fr}
+  .stats-grid{grid-template-columns:repeat(2,1fr)}
+  .contact-grid{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:700px){
+  .nav-links{display:none}
+  .hamburger{display:flex}
+  .services-grid{grid-template-columns:1fr}
+  .why-grid{grid-template-columns:1fr}
+  .plat-grid{grid-template-columns:1fr 1fr}
+  .stats-grid{grid-template-columns:1fr 1fr}
+  .footer-grid{grid-template-columns:1fr}
+  .form-row{grid-template-columns:1fr}
+  .form-checkboxes{grid-template-columns:1fr 1fr}
+  .tl-line{left:22px}
+  .tl-step{width:46px;height:46px;font-size:1rem}
+  .hero-btns{flex-direction:column;align-items:flex-start}
+}
+
+/* ── RTL ── */
+[dir=rtl] .divider{background:linear-gradient(270deg,var(--gold),transparent)}
+[dir=rtl] .hero h1,[dir=rtl] .hero-sub,[dir=rtl] .trust-pill{text-align:right}
+[dir=rtl] .hero-btns{flex-direction:row-reverse;justify-content:flex-end}
+[dir=rtl] .tl-item{flex-direction:row-reverse}
+[dir=rtl] .tl-line{left:auto;right:28px}
+[dir=rtl] .c-info-card{flex-direction:row-reverse;text-align:right}
+[dir=rtl] .check-item{flex-direction:row-reverse;text-align:right}
+[dir=rtl] .footer-about p{text-align:right}
+[dir=rtl] .sub--center{text-align:center}
+[dir=rtl] .hero-content{direction:rtl}
+[dir=rtl] .t-author{flex-direction:row-reverse;text-align:right}
+[dir=rtl] .faq-q{flex-direction:row-reverse}
+[dir=rtl] .hero-btns{flex-direction:row-reverse;flex-wrap:wrap}
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="nav" id="nav">
+  <a href="#home" class="nav-logo">
+    <div class="nav-logo-mark">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#0A1F44" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <polygon points="12 2 2 7 12 12 22 7 12 2"/>
+        <polyline points="2 17 12 22 22 17"/>
+        <polyline points="2 12 12 17 22 12"/>
+      </svg>
+    </div>
+    <span class="nav-wordmark">Nexus <span>e</span>Ventures</span>
+  </a>
+  <div class="nav-links">
+    <a href="#about" data-en="About" data-ar="من نحن">About</a>
+    <a href="#how" data-en="How It Works" data-ar="كيف يعمل">How It Works</a>
+    <a href="#brands-section" data-en="For Brands" data-ar="للعلامات">For Brands</a>
+    <a href="#our-brands" data-en="Our Brands" data-ar="علاماتنا">Our Brands</a>
+    <a href="#contact" data-en="Contact" data-ar="تواصل">Contact</a>
+  </div>
+  <div class="nav-r">
+    <button class="lang-btn" id="langBtn">عر</button>
+    <a href="#contact" class="btn btn-gold" style="padding:.55rem 1.2rem;font-size:.84rem" data-en="Partner With Us" data-ar="شارك معنا">Partner With Us</a>
+    <div class="hamburger" id="ham"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+<div class="overlay" id="overlay"></div>
+<div class="drawer" id="drawer">
+  <a href="#about" class="drawer-link" data-en="About" data-ar="من نحن">About</a>
+  <a href="#how" class="drawer-link" data-en="How It Works" data-ar="كيف يعمل">How It Works</a>
+  <a href="#brands-section" class="drawer-link" data-en="For Brands" data-ar="للعلامات">For Brands</a>
+  <a href="#our-brands" class="drawer-link" data-en="Our Brands" data-ar="علاماتنا">Our Brands</a>
+  <a href="#contact" class="drawer-link" data-en="Contact" data-ar="تواصل">Contact</a>
+  <a href="#contact" class="btn btn-gold" style="margin-top:1rem;justify-content:center" data-en="Partner With Us" data-ar="شارك معنا">Partner With Us</a>
+</div>
+
+<!-- WHATSAPP -->
+<a href="https://wa.me/971500000000" target="_blank" class="wa" title="WhatsApp Us">
+  <svg viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.106.546 4.086 1.5 5.814L0 24l6.335-1.663A11.942 11.942 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg>
+</a>
+
+<!-- ═══════════════════════════════════════════════ -->
+<!-- HERO -->
+<!-- ═══════════════════════════════════════════════ -->
+<section class="hero" id="home">
+  <div class="particles" id="particles"></div>
+  <div class="hero-bg">
+    <img src="https://images.unsplash.com/photo-1546412414-e1885259563a?w=1600&q=80&auto=format&fit=crop" alt="Dubai skyline at night" loading="eager"/>
+  </div>
+  <div class="hero-overlay"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-glow-b"></div>
+
+  <div class="hero-content">
+    <div>
+      <div class="hero-badge">
+        <span class="hero-badge-dot"></span>
+        <span data-en="Gulf's Premier Brand Distribution Network" data-ar="شبكة توزيع العلامات التجارية الرائدة في الخليج">Gulf's Premier Brand Distribution Network</span>
+      </div>
+      <h1 data-en-html="The Gulf's <span class='gold-word'>#1</span><br>International Brand<br>Launch Partner" data-ar-html="الشريك الأول في إطلاق<br>العلامات التجارية<br>في <span class='gold-word'>الخليج</span>">
+        The Gulf's <span class="gold-word">#1</span><br>International Brand<br>Launch Partner
+      </h1>
+      <p class="hero-sub" data-en="We launch proven global brands on Amazon UAE, KSA & Noon — handling everything from listing to first sale. Zero cost to brands." data-ar="نطلق العلامات التجارية العالمية على أمازون الإمارات والسعودية ونون — من القائمة حتى أول عملية بيع. بدون أي تكلفة.">
+        We launch proven global brands on Amazon UAE, KSA &amp; Noon — handling everything from listing to first sale. <strong style="color:#fff">Zero cost to brands.</strong>
+      </p>
+      <div class="hero-btns">
+        <a href="#contact" class="btn btn-gold">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          <span data-en="Partner With Us" data-ar="شارك معنا">Partner With Us</span>
+        </a>
+        <a href="#how" class="btn btn-outline">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+          <span data-en="How It Works" data-ar="كيف يعمل">How It Works</span>
+        </a>
+      </div>
+      <div class="trust-pill">
+        <div class="trust-avatars"><span>JM</span><span>SA</span><span>RK</span></div>
+        <p data-en="Trusted by <strong>1,000+</strong> sellers across UAE, KSA, UK &amp; Canada" data-ar="موثوق من <strong>+1,000</strong> بائع في الإمارات والسعودية والمملكة المتحدة وكندا">
+          Trusted by <strong>1,000+</strong> sellers across UAE, KSA, UK &amp; Canada
+        </p>
+      </div>
+    </div>
+    <!-- Hero card -->
+    <div class="hero-visual">
+      <div class="hero-card">
+        <div class="hero-img-wrap">
+          <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80&auto=format&fit=crop" alt="E-commerce brand dashboard" loading="lazy"/>
+        </div>
+        <div class="hero-card-body">
+          <div class="hero-card-stats">
+            <div class="hcs"><div class="hcs-num">1K+</div><div class="hcs-lbl">Active Sellers</div></div>
+            <div class="hcs"><div class="hcs-num">4</div><div class="hcs-lbl">Countries</div></div>
+            <div class="hcs"><div class="hcs-num">10+</div><div class="hcs-lbl">Brands Live</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-float-badge">
+        <strong>30 Days</strong>
+        <span>To Go Live</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════ -->
+<!-- PLATFORM MARQUEE -->
+<!-- ═══════════════════════════════════════════════ -->
+<div class="marquee-section">
+  <div class="marquee-track" id="marqueeTrack">
+    <div class="marquee-item"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.42 9.14L12 2 5.58 9.14C4.59 10.29 4 11.77 4 13.4 4 17.08 7.13 20 12 20s8-2.92 8-6.6c0-1.63-.59-3.11-1.58-4.26z"/></svg>Amazon UAE 🇦🇪</div>
+    <div class="marquee-item"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.42 9.14L12 2 5.58 9.14C4.59 10.29 4 11.77 4 13.4 4 17.08 7.13 20 12 20s8-2.92 8-6.6c0-1.63-.59-3.11-1.58-4.26z"/></svg>Amazon KSA 🇸🇦</div>
+    <div class="marquee-item"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>Noon UAE 🇦🇪</div>
+    <div class="marquee-item"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>Noon KSA 🇸🇦</div>
+    <div class="marquee-item">🛡️ Brand Registry</div>
+    <div class="marquee-item">📦 Fulfilment Managed</div>
+    <div class="marquee-item">🌐 Arabic Content</div>
+    <div class="marquee-item">📊 Monthly Reports</div>
+    <div class="marquee-item">💰 Zero Cost to Brands</div>
+    <div class="marquee-item">⭐ 4+ Star Brands Only</div>
+    <!-- Duplicate for seamless loop -->
+    <div class="marquee-item"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.42 9.14L12 2 5.58 9.14C4.59 10.29 4 11.77 4 13.4 4 17.08 7.13 20 12 20s8-2.92 8-6.6c0-1.63-.59-3.11-1.58-4.26z"/></svg>Amazon UAE 🇦🇪</div>
+    <div class="marquee-item"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.42 9.14L12 2 5.58 9.14C4.59 10.29 4 11.77 4 13.4 4 17.08 7.13 20 12 20s8-2.92 8-6.6c0-1.63-.59-3.11-1.58-4.26z"/></svg>Amazon KSA 🇸🇦</div>
+    <div class="marquee-item"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>Noon UAE 🇦🇪</div>
+    <div class="marquee-item"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>Noon KSA 🇸🇦</div>
+    <div class="marquee-item">🛡️ Brand Registry</div>
+    <div class="marquee-item">📦 Fulfilment Managed</div>
+    <div class="marquee-item">🌐 Arabic Content</div>
+    <div class="marquee-item">📊 Monthly Reports</div>
+    <div class="marquee-item">💰 Zero Cost to Brands</div>
+    <div class="marquee-item">⭐ 4+ Star Brands Only</div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════ -->
+<!-- STATS -->
+<!-- ═══════════════════════════════════════════════ -->
+<section class="stats-section" id="stats">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-card reveal" data-delay="1">
+        <div class="stat-num" data-count="1000" data-suffix="+">0+</div>
+        <div class="stat-lbl" data-en="Active Amazon & Noon Seller Clients" data-ar="عملاء بائعين نشطين على أمازون ونون">Active Amazon &amp; Noon Seller Clients</div>
+      </div>
+      <div class="stat-card reveal" data-delay="2">
+        <div class="stat-num" data-count="4" data-suffix="">0</div>
+        <div class="stat-lbl" data-en="Countries Operated In" data-ar="دول نعمل فيها">Countries Operated In</div>
+      </div>
+      <div class="stat-card reveal" data-delay="3">
+        <div class="stat-num" data-count="4" data-suffix="">0</div>
+        <div class="stat-lbl" data-en="E-commerce Platforms" data-ar="منصات التجارة الإلكترونية">E-commerce Platforms</div>
+      </div>
+      <div class="stat-card reveal" data-delay="4">
+        <div class="stat-num" data-count="30" data-suffix=" Days">0</div>
+        <div class="stat-lbl" data-en="Average Brand Go-Live Time" data-ar="متوسط وقت إطلاق العلامة">Average Brand Go-Live Time</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════ -->
+<!-- ABOUT -->
+<!-- ═══════════════════════════════════════════════ -->
+<section class="section section--mid" id="about">
+  <div class="container">
+    <div class="about-split">
+      <div class="reveal-l">
+        <div class="about-img">
+          <img src="https://images.unsplash.com/photo-1616161560417-7b6f6c7d6b62?w=800&q=80&auto=format&fit=crop" alt="Mudassir Gulzar - CEO Nexus eVentures" loading="lazy"/>
+          <div class="about-badge">
+            <strong>2+</strong>
+            <span data-en="Yrs Partnership" data-ar="سنوات شراكة">Yrs Partnership</span>
+          </div>
+        </div>
+      </div>
+      <div class="reveal-r">
+        <div class="tag" data-en="Who We Are" data-ar="من نحن">Who We Are</div>
+        <h2 class="h2" data-en-html="Built for <span class='gold-word'>Gulf-Scale</span> Growth" data-ar-html="مبنيون من أجل النمو على <span class='gold-word'>مستوى الخليج</span>">Built for <span class="gold-word">Gulf-Scale</span> Growth</h2>
+        <div class="divider"></div>
+        <p class="sub" style="margin-bottom:1.4rem" data-en="Nexus eVentures Corporation was founded by Mudassir Gulzar with one clear mission — bridge proven international brands with the Gulf's rapidly growing e-commerce market. We find brands excelling on Amazon US, UK, and Australia — with zero Gulf presence — and launch them across Amazon UAE, KSA, and Noon." data-ar="تأسست شركة نيكسس إي فينتشرز كوربوريشن على يد مدسر غلزار بمهمة واضحة — الجسر بين العلامات التجارية الدولية المُثبتة وسوق التجارة الإلكترونية الخليجي المتنامي بسرعة.">
+          Nexus eVentures Corporation was founded by Mudassir Gulzar with one clear mission — bridge proven international brands with the Gulf's rapidly growing e-commerce market. We find brands excelling on Amazon US, UK, and Australia — with zero Gulf presence — and launch them across Amazon UAE, KSA, and Noon.
+        </p>
+        <ul class="check-list">
+          <li class="check-item"><span class="check-dot"></span><span data-en="Amazon UAE, KSA, Noon UAE & KSA — all four platforms" data-ar="أمازون الإمارات، السعودية، نون الإمارات والسعودية — جميع المنصات الأربع">Amazon UAE, KSA, Noon UAE &amp; KSA — all four platforms</span></li>
+          <li class="check-item"><span class="check-dot"></span><span data-en="100% operations handled — listings, PPC, logistics, Arabic content" data-ar="إدارة 100% العمليات — القوائم، الإعلانات، اللوجستيات، المحتوى العربي">100% operations handled — listings, PPC, logistics, Arabic content</span></li>
+          <li class="check-item"><span class="check-dot"></span><span data-en="Sister company: Noon Guru Services — 1,000+ active seller network" data-ar="الشركة الشقيقة: خدمات نون جورو — شبكة أكثر من 1000 بائع نشط">Sister company: Noon Guru Services — 1,000+ active seller network</span></li>
+          <li class="check-item"><span class="check-dot"></span><span data-en="Only 4+ star brands with 1,000+ reviews accepted" data-ar="نقبل فقط العلامات بتقييم 4+ نجوم وأكثر من 1000 تقييم">Only 4+ star brands with 1,000+ reviews accepted</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════ -->
+<!-- WHAT WE DO -->
+<!-- ═══════════════════════════════════════════════ -->
+<section class="section" id="brands-section">
+  <div class="container">
+    <div style="text-align:center" class="reveal">
+      <div class="tag" style="margin:0 auto" data-en="What We Do" data-ar="ماذا نفعل">What We Do</div>
+      <h2 class="h2" data-en-html="A Complete <span class='gold-word'>Brand Launch Engine</span>" data-ar-html="محرك إطلاق علامات تجارية <span class='gold-word'>متكامل</span>">A Complete <span class="gold-word">Brand Launch Engine</span></h2>
+      <div class="divider divider--center"></div>
+      <p class="sub sub--center" data-en="From discovery to Gulf dominance — we handle every step of your market entry." data-ar="من الاكتشاف إلى السيطرة على السوق الخليجية — نتولى كل خطوة.">From discovery to Gulf dominance — we handle every step of your market entry.</p>
+    </div>
+    <div class="services-grid">
+      <div class="svc-card reveal" data-delay="1">
+        <div class="svc-icon"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></div>
+        <h3 data-en="Brand Discovery" data-ar="اكتشاف العلامات التجارية">Brand Discovery</h3>
+        <p data-en="We identify proven international brands selling well on Amazon US, UK, or Australia — but with zero presence in UAE or KSA. These are our target partners." data-ar="نكتشف العلامات التجارية الدولية المثبتة التي تبيع بشكل جيد على أمازون في الولايات المتحدة والمملكة المتحدة وأستراليا.">We identify proven international brands selling well on Amazon US, UK, or Australia — but with zero presence in UAE or KSA. These are our target partners.</p>
+      </div>
+      <div class="svc-card reveal" data-delay="2">
+        <div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <h3 data-en="Exclusive Distribution" data-ar="التوزيع الحصري">Exclusive Distribution</h3>
+        <p data-en="We secure exclusive UAE and KSA distribution rights for 2+ years. We invest in the launch — PPC, listings, content. Brands take zero risk." data-ar="نؤمن حقوق التوزيع الحصرية في الإمارات والسعودية لمدة سنتين أو أكثر.">We secure exclusive UAE and KSA distribution rights for 2+ years. We invest in the launch — PPC, listings, content. Brands take zero risk.</p>
+      </div>
+      <div class="svc-card reveal" data-delay="3">
+        <div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-8 2a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"/></svg></div>
+        <h3 data-en="Gulf Market Launch" data-ar="إطلاق في السوق الخليجي">Gulf Market Launch</h3>
+        <p data-en="We list on Amazon UAE, KSA & Noon, run Arabic content, manage PPC ads, and supply your products to our 1,000+ active Gulf seller clients." data-ar="نضع قوائم على أمازون الإمارات والسعودية ونون، وندير الإعلانات ونوفر منتجاتك لشبكة بائعينا.">We list on Amazon UAE, KSA &amp; Noon, run Arabic content, manage PPC ads, and supply your products to our 1,000+ active Gulf seller clients.</p>
+      </div>
+      <div class="svc-card reveal" data-delay="4">
+        <div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M14.5 10c-.83 0-1.5-.67-1.5-1.5v-5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5v5c0 .83-.67 1.5-1.5 1.5z"/><path d="M20.5 10H19V8.5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/><path d="M9.5 14c.83 0 1.5.67 1.5 1.5v5c0 .83-.67 1.5-1.5 1.5S8 21.33 8 20.5v-5c0-.83.67-1.5 1.5-1.5z"/><path d="M3.5 14H5v1.5c0 .83-.67 1.5-1.5 1.5S2 16.33 2 15.5 2.67 14 3.5 14z"/><path d="M14 14.5c0-.83.67-1.5 1.5-1.5h5c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5h-5c-.83 0-1.5-.67-1.5-1.5z"/><path d="M15.5 19H14v1.5c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5-.67-1.5-1.5-1.5z"/><path d="M10 9.5C10 8.67 9.33 8 8.5 8h-5C2.67 8 2 8.67 2 9.5S2.67 11 3.5 11h5c.83 0 1.5-.67 1.5-1.5z"/><path d="M8.5 5H10V3.5C10 2.67 9.33 2 8.5 2S7 2.67 7 3.5 7.67 5 8.5 5z"/></svg></div>
+        <h3 data-en="PPC & Arabic Content" data-ar="الإعلانات والمحتوى العربي">PPC &amp; Arabic Content</h3>
+        <p data-en="We craft native Arabic listings that convert Gulf shoppers, paired with optimised PPC campaigns that drive visibility and velocity from day one." data-ar="نصمم قوائم عربية أصيلة تحوّل المتسوقين الخليجيين، مقرونة بحملات PPC محسّنة.">We craft native Arabic listings that convert Gulf shoppers, paired with optimised PPC campaigns that drive visibility and velocity from day one.</p>
+      </div>
+      <div class="svc-card reveal" data-delay="5">
+        <div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div>
+        <h3 data-en="Buy Box Protection" data-ar="حماية صندوق الشراء">Buy Box Protection</h3>
+        <p data-en="We stop grey market sellers by securing official brand registry and exclusive distribution rights — protecting your pricing integrity on all Gulf platforms." data-ar="نوقف بائعي السوق الرمادية بتأمين تسجيل العلامة الرسمي وحقوق التوزيع الحصرية.">We stop grey market sellers by securing official brand registry and exclusive distribution rights — protecting your pricing integrity on all Gulf platforms.</p>
+      </div>
+      <div class="svc-card reveal" data-delay="6">
+        <div class="svc-icon"><svg viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div>
+        <h3 data-en="Monthly Reporting" data-ar="التقارير الشهرية">Monthly Reporting</h3>
+        <p data-en="Every 5th of the month, you receive detailed sales, revenue, and performance dashboards — full transparency, no surprises." data-ar="في كل خامس من الشهر، تتلقى لوحات مبيعات وإيرادات وأداء مفصلة.">Every 5th of the month, you receive detailed sales, revenue, and performance dashboards — full transparency, no surprises.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════ -->
+<!-- WHY US -->
+<!-- ═══════════════════════════════════════════════ -->
+<section class="section section--grey" id="why">
+  <div class="container">
+    <div style="text-align:center" class="reveal">
+      <div class="tag" style="margin:0 auto" data-en="Why Choose Us" data-ar="لماذا تختارنا">Why Choose Us</div>
+      <h2 class="h2 h2--royal" data-en-html="Why International Brands<br>Choose <span class='gold-word'>Nexus eVentures</span>" data-ar-html="لماذا تختار العلامات الدولية<br><span class='gold-word'>نيكسس إي فينتشرز</span>">Why International Brands<br>Choose <span class="gold-word">Nexus eVentures</span></h2>
+      <div class="divider divider--center" style="background:linear-gradient(90deg,var(--royal),transparent)"></div>
+    </div>
+    <div class="why-grid">
+      <div class="why-card reveal-s" data-delay="1">
+        <div class="why-ico"><svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+        <h3 data-en="Zero Cost to Enter" data-ar="دخول بدون تكلفة">Zero Cost to Enter</h3>
+        <p data-en="We invest in your Gulf market launch — PPC, content, listing fees. You supply the product. That's it." data-ar="نستثمر في إطلاق علامتك في الخليج. أنت تزودنا بالمنتج فقط.">We invest in your Gulf market launch — PPC, content, listing fees. You supply the product. That's it.</p>
+      </div>
+      <div class="why-card reveal-s" data-delay="2">
+        <div class="why-ico"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+        <h3 data-en="4+ Star Brands Only" data-ar="علامات 4+ نجوم فقط">4+ Star Brands Only</h3>
+        <p data-en="We only partner with brands rated 4.0+ stars with 1,000+ reviews — ensuring quality and Gulf market fit." data-ar="نتعاون فقط مع العلامات ذات تقييم 4+ نجوم وأكثر من 1000 تقييم.">We only partner with brands rated 4.0+ stars with 1,000+ reviews — ensuring quality and Gulf market fit.</p>
+      </div>
+      <div class="why-card reveal-s" data-delay="3">
+        <div class="why-ico"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+        <h3 data-en="1,000+ Ready Buyers" data-ar="+1,000 مشترٍ جاهز">1,000+ Ready Buyers</h3>
+        <p data-en="Instant access to our active seller client network from Day 1 — your brand never starts from zero in the Gulf." data-ar="وصول فوري لشبكة عملائنا النشطة من اليوم الأول.">Instant access to our active seller client network from Day 1 — your brand never starts from zero in the Gulf.</p>
+      </div>
+      <div class="why-card reveal-s" data-delay="4">
+        <div class="why-ico"><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+        <h3 data-en="2-Year Exclusivity" data-ar="حصرية لمدة سنتين">2-Year Exclusivity</h3>
+        <p data-en="We protect your brand — no grey market sellers, no Buy Box wars. Full ownership of your Gulf marketplace presence." data-ar="نحمي علامتك — لا بائعي السوق الرمادية، لا حروب Buy Box.">We protect your brand — no grey market sellers, no Buy Box wars. Full ownership of your Gulf marketplace presence.</p>
+      </div>
+      <div class="why-card reveal-s" data-delay="5">
+        <div class="why-ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+        <h3 data-en="Full-Service Operation" data-ar="عملية متكاملة">Full-Service Operation</h3>
+        <p data-en="Arabic content, compliance, PPC ads, and fulfilment — we handle it all. You focus on your core business." data-ar="المحتوى العربي والامتثال وإعلانات PPC والتنفيذ — نتولى كل شيء.">Arabic content, compliance, PPC ads, and fulfilment — we handle it all. You focus on your core business.</p>
+      </div>
+      <div class="why-card reveal-s" data-delay="6">
+        <div class="why-ico"><svg viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
+        <h3 data-en="Wholesale to Exclusive" data-ar="من الجملة إلى الحصرية">Wholesale to Exclusive</h3>
+        <p data-en="We start as wholesalers for 4-6 months, building momentum. Then activate full exclusivity — maximum protection for your brand." data-ar="نبدأ كموزعين بالجملة لمدة 4-6 أشهر، ثم نُفعّل الحصرية الكاملة.">We start as wholesalers for 4-6 months, building momentum. Then activate full exclusivity — maximum protection for your brand.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════ -->
+<!-- HOW IT WORKS -->
+<!-- ═══════════════════════════════════════════════ -->
+<section class="section section--mid" id="how">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1fr 1.2fr;gap:5rem;align-items:start">
+      <div class="reveal-l">
+        <div class="tag" data-en="The Process" data-ar="العملية">The Process</div>
+        <h2 class="h2" data-en-html="How a Brand<br>Partnership <span class='gold-word'>Works</span>" data-ar-html="كيف تعمل<br><span class='gold-word'>شراكة</span> العلامة">How a Brand<br>Partnership <span class="gold-word">Works</span></h2>
+        <div class="divider"></div>
+        <p class="sub" data-en="Two phases. Zero risk to you. Your brand launches in the Gulf in 30 days or less." data-ar="مرحلتان. لا مخاطرة عليك. علامتك تُطلق في الخليج خلال 30 يوماً أو أقل.">Two phases. Zero risk to you. Your brand launches in the Gulf in 30 days or less.</p>
+        <div style="margin-top:2rem">
+          <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=600&q=80&auto=format&fit=crop" alt="Gulf e-commerce growth" style="border-radius:14px;width:100%;aspect-ratio:16/9;object-fit:cover;border:1px solid rgba(196,154,42,.15)" loading="lazy"/>
+        </div>
+      </div>
+      <div class="timeline reveal-r">
+        <div class="tl-line"></div>
+        <div class="tl-phase-badge ph1" data-en="Phase 1 — Wholesale (Months 1-6)" data-ar="المرحلة الأولى — الجملة (الأشهر 1-6)">Phase 1 — Wholesale (Months 1–6)</div>
+        <div class="tl-item">
+          <div class="tl-step">1</div>
+          <div class="tl-body">
+            <h3 data-en="We Find Your Brand" data-ar="نكتشف علامتك التجارية">We Find Your Brand</h3>
+            <p data-en="We research Amazon US/UK/AU — finding brands with 4+ stars, 1,000+ reviews, no UAE/KSA presence." data-ar="نبحث على أمازون في الولايات المتحدة والمملكة المتحدة وأستراليا بحثاً عن العلامات المناسبة.">We research Amazon US/UK/AU — finding brands with 4+ stars, 1,000+ reviews, no UAE/KSA presence.</p>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-step">2</div>
+          <div class="tl-body">
+            <h3 data-en="We Reach Out" data-ar="نتواصل معك">We Reach Out</h3>
+            <p data-en="We contact brand owners and propose exclusive Gulf distribution — zero cost, zero risk to the brand." data-ar="نتواصل مع أصحاب العلامات ونقترح التوزيع الحصري في الخليج.">We contact brand owners and propose exclusive Gulf distribution — zero cost, zero risk to the brand.</p>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-step">3</div>
+          <div class="tl-body">
+            <h3 data-en="We Sign & Launch" data-ar="نوقع وننطلق">We Sign &amp; Launch</h3>
+            <p data-en="2-year exclusive distribution agreement. We create all listings, Arabic content, and run PPC advertising. Brand goes live within 30 days." data-ar="اتفاقية توزيع حصرية لمدتين. ننشئ جميع القوائم والمحتوى العربي وندير الإعلانات.">2-year exclusive distribution agreement. We create all listings, Arabic content, and run PPC advertising. Brand goes live within 30 days.</p>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-step">4</div>
+          <div class="tl-body">
+            <h3 data-en="Wholesale Phase (Months 1-6)" data-ar="مرحلة الجملة (الأشهر 1-6)">Wholesale Phase (Months 1–6)</h3>
+            <p data-en="We operate as authorised wholesalers — buying stock, building BSR ranking, generating the first Gulf reviews. We absorb all advertising costs." data-ar="نعمل كموزعين معتمدين — نشتري المخزون، نبني تصنيف BSR، ونولّد أول التقييمات الخليجية.">We operate as authorised wholesalers — buying stock, building BSR ranking, generating the first Gulf reviews. We absorb all advertising costs.</p>
+          </div>
+        </div>
+        <div class="tl-phase-badge ph2" style="margin-top:1.4rem" data-en="Phase 2 — Exclusive Rights (Month 6+)" data-ar="المرحلة الثانية — الحقوق الحصرية (الشهر السادس+)">Phase 2 — Exclusive Rights (Month 6+)</div>
+        <div class="tl-item">
+          <div class="tl-step">5</div>
+          <div class="tl-body">
+            <h3 data-en="Full Exclusivity Activated" data-ar="تفعيل الحصرية الكاملة">Full Exclusivity Activated</h3>
+            <p data-en="No other seller can add your products. We control the Buy Box — protecting price integrity. Your brand is dominant on Gulf marketplaces." data-ar="لا يمكن لأي بائع آخر إضافة منتجاتك. نتحكم في Buy Box. علامتك مهيمنة على أسواق الخليج.">No other seller can add your products. We control the Buy Box — protecting price integrity. Your brand is dominant on Gulf marketplaces.</p>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-step">6</div>
+          <div class="tl-body">
+            <h3 data-en="Monthly Reports & Growth" data-ar="التقارير الشهرية والنمو">Monthly Reports &amp; Growth</h3>
+            <p data-en="Monthly sales, revenue, and performance dashboards delivered by the 5th of every month. Plus expansion to Egypt, Kuwait, Bahrain in Year 2." data-ar="لوحات المبيعات والإيرادات شهرياً في الخامس من كل شهر، بالإضافة للتوسع في عام ثانٍ.">Monthly sales, revenue, and performance dashboards delivered by the 5th of every month. Plus expansion to Egypt, Kuwait, Bahrain in Year 2.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════ -->
+<!-- OUR BRANDS -->
+<!-- ═══════════════════════════════════════════════ -->
+<section class="section section--dark" id="our-brands">
+  <div class="container">
+    <div style="text-align:center" class="reveal">
+      <div class="tag" style="margin:0 auto" data-en="Our Portfolio" data-ar="محفظتنا">Our Portfolio</div>
+      <h2 class="h2" data-en-html="Brands We've <span class='gold-word'>Launched in the Gulf</span>" data-ar-html="العلامات التي <span class='gold-word'>أطلقناها في الخليج</span>">Brands We've <span class="gold-word">Launched in the Gulf</span></h2>
+      <div class="divider divider--center"></div>
+      <p class="sub sub--center" data-en="10 brands live and growing — from India, UK, South Korea, Egypt and beyond." data-ar="10 علامات نشطة ومتنامية — من الهند والمملكة المتحدة وكوريا الجنوبية ومصر وما وراءها.">10 brands live and growing — from India, UK, South Korea, Egypt and beyond.</p>
+    </div>
+    <div class="brands-marquee" style="margin-top:3rem">
+      <div class="brands-track" id="brandsTrack">
+        <div class="brand-chip"><span class="brand-flag">🇮🇳</span>Blue Tea</div>
+        <div class="brand-chip"><span class="brand-flag">🇮🇳</span>Heapwell</div>
+        <div class="brand-chip"><span class="brand-flag">🇦🇪</span>Arabian Halcyon</div>
+        <div class="brand-chip"><span class="brand-flag">🇰🇷</span>Skin1004</div>
+        <div class="brand-chip"><span class="brand-flag">🇬🇧</span>Proiron</div>
+        <div class="brand-chip"><span class="brand-flag">🇮🇳</span>Satya</div>
+        <div class="brand-chip"><span class="brand-flag">🌍</span>Nile Weave</div>
+        <div class="brand-chip"><span class="brand-flag">🌏</span>Chado</div>
+        <div class="brand-chip"><span class="brand-flag">🌐</span>Smarty</div>
+        <div class="brand-chip"><span class="brand-flag">🌐</span>Skina</div>
+        <!-- Duplicate -->
+        <div class="brand-chip"><span class="brand-flag">🇮🇳</span>Blue Tea</div>
+        <div class="brand-chip"><span class="brand-flag">🇮🇳</span>Heapwell</div>
+        <div class="brand-chip"><span class="brand-flag">🇦🇪</span>Arabian Halcyon</div>
+        <div class="brand-chip"><span class="brand-flag">🇰🇷</span>Skin1004</div>
+        <div class="brand-chip"><span class="brand-flag">🇬🇧</span>Proiron</div>
+        <div class="brand-chip"><span class="brand-flag">🇮🇳</span>Satya</div>
+        <div class="brand-chip"><span class="brand-flag">🌍</span>Nile Weave</div>
+        <div class="brand-chip"><span class="brand-flag">🌏</span>Chado</div>
+        <div class="brand-chip"><span class="brand-flag">🌐</span>Smarty</div>
+        <div class="brand-chip"><span class="brand-flag">🌐</span>Skina</div>
+      </div>
+    </div>
+    <p class="brand-cats-note" data-en="And growing — 3 to 5 new brands added every month across Home, Beauty, Sports, Health, Baby & more" data-ar="ومتنامي — 3 إلى 5 علامات جديدة كل شهر في المنزل والجمال والرياضة والصحة والأطفال وأكثر">And growing — 3 to 5 new brands added every month across Home, Beauty, Sports, Health, Baby &amp; more</p>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════ -->
+<!-- PLATFORMS -->
+<!-- ═══════════════════════════════════════════════ -->
+<section class="section section--grey" id="platforms">
+  <div class="container">
+    <div style="text-align:center" class="reveal">
+      <div class="tag" style="margin:0 auto" data-en="Our Platforms" data-ar="منصاتنا">Our Platforms</div>
+      <h2 class="h2 h2--royal" data-en-html="Where We <span class='gold-word'>Sell Your Brand</span>" data-ar-html="أين <span class='gold-word'>نبيع علامتك</span>">Where We <span class="gold-word">Sell Your Brand</span></h2>
+      <div class="divider divider--center" style="background:linear-gradient(90deg,var(--royal),transparent)"></div>
+      <p class="sub sub--center sub--dark" data-en="Full-spectrum coverage across the Gulf's leading e-commerce platforms." data-ar="تغطية شاملة عبر منصات التجارة الإلكترونية الرائدة في الخليج.">Full-spectrum coverage across the Gulf's leading e-commerce platforms.</p>
+    </div>
+    <div class="plat-grid">
+      <div class="plat-card reveal-s" data-delay="1">
+        <div class="plat-emoji">🛒</div>
+        <h3 style="color:var(--navy)">Amazon UAE</h3>
+        <p>30M+ monthly shoppers</p>
+        <div class="plat-flag-line">🇦🇪 United Arab Emirates</div>
+      </div>
+      <div class="plat-card reveal-s" data-delay="2">
+        <div class="plat-emoji">🛒</div>
+        <h3 style="color:var(--navy)">Amazon KSA</h3>
+        <p>Fastest growing Gulf marketplace</p>
+        <div class="plat-flag-line">🇸🇦 Saudi Arabia</div>
+      </div>
+      <div class="plat-card reveal-s" data-delay="3">
+        <div class="plat-emoji">⭐</div>
+        <h3 style="color:var(--navy)">Noon UAE</h3>
+        <p>Gulf's homegrown champion</p>
+        <div class="plat-flag-line">🇦🇪 United Arab Emirates</div>
+      </div>
+      <div class="plat-card reveal-s" data-delay="4">
+        <div class="plat-emoji">⭐</div>
+        <h3 style="color:var(--navy)">Noon KSA</h3>
+        <p>30M+ KSA consumers reached</p>
+        <div class="plat-flag-line">🇸🇦 Saudi Arabia</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════ -->
+<!-- TESTIMONIALS -->
+<!-- ═══════════════════════════════════════════════ -->
+<section class="section section--mid" id="testimonials">
+  <div class="container">
+    <div style="text-align:center" class="reveal">
+      <div class="tag" style="margin:0 auto" data-en="Testimonials" data-ar="الشهادات">Testimonials</div>
+      <h2 class="h2" data-en-html="What <span class='gold-word'>Brand Partners</span> Say" data-ar-html="ما يقوله <span class='gold-word'>شركاء العلامات</span>">What <span class="gold-word">Brand Partners</span> Say</h2>
+      <div class="divider divider--center"></div>
+    </div>
+    <div class="t-outer reveal">
+      <div class="t-track" id="tTrack">
+        <div class="t-slide">
+          <div class="t-card">
+            <div class="t-stars">★★★★★</div>
+            <p class="t-quote" data-en="Partnering with Nexus eVentures was the best decision we made for Gulf expansion. They handled everything — our products were live on Amazon UAE within 3 weeks." data-ar="الشراكة مع نيكسس إي فينتشرز كانت أفضل قرار اتخذناه للتوسع في الخليج. تولوا كل شيء — منتجاتنا كانت على أمازون الإمارات خلال 3 أسابيع.">"Partnering with Nexus eVentures was the best decision we made for Gulf expansion. They handled everything — our products were live on Amazon UAE within 3 weeks."</p>
+            <div class="t-author">
+              <div class="t-avatar" style="background:linear-gradient(135deg,var(--gold),var(--gold-l));color:var(--navy)">JM</div>
+              <div>
+                <div class="t-name">James Mitchell</div>
+                <div class="t-role">CEO — Proiron, United Kingdom</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="t-slide">
+          <div class="t-card">
+            <div class="t-stars">★★★★★</div>
+            <p class="t-quote" data-en="We had zero presence in the Middle East. Nexus eVentures not only launched us but grew our sales to $15,000/month within 6 months — with zero investment from our side." data-ar="لم يكن لدينا أي حضور في الشرق الأوسط. نيكسس لم تطلقنا فحسب بل نمت مبيعاتنا إلى 15000 دولار شهرياً خلال 6 أشهر.">"We had zero presence in the Middle East. Nexus eVentures not only launched us but grew our sales to $15,000/month within 6 months — with zero investment from our side."</p>
+            <div class="t-author">
+              <div class="t-avatar" style="background:linear-gradient(135deg,#10b981,#059669);color:#fff">SA</div>
+              <div>
+                <div class="t-name">Sofia Andersen</div>
+                <div class="t-role">Founder — Heapwell, India</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="t-slide">
+          <div class="t-card">
+            <div class="t-stars">★★★★★</div>
+            <p class="t-quote" data-en="The team at Nexus eVentures understands Gulf consumers better than anyone we have worked with. They are true partners, not just distributors." data-ar="فريق نيكسس إي فينتشرز يفهم المستهلكين الخليجيين أفضل من أي شخص عملنا معه. إنهم شركاء حقيقيون.">"The team at Nexus eVentures understands Gulf consumers better than anyone we have worked with. They are true partners, not just distributors."</p>
+            <div class="t-author">
+              <div class="t-avatar" style="background:linear-gradient(135deg,#3b82f6,#1d4ed8);color:#fff">RK</div>
+              <div>
+                <div class="t-name">Raj Kumar</div>
+                <div class="t-role">Director — Skin1004, South Korea</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="slider-nav">
+        <button class="s-btn" id="tPrev"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg></button>
+        <div class="dots"><div class="dot on" data-i="0"></div><div class="dot" data-i="1"></div><div class="dot" data-i="2"></div></div>
+        <button class="s-btn" id="tNext"><svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════ -->
+<!-- FAQ -->
+<!-- ═══════════════════════════════════════════════ -->
+<section class="section" id="faq">
+  <div class="container">
+    <div style="text-align:center" class="reveal">
+      <div class="tag" style="margin:0 auto" data-en="FAQ" data-ar="الأسئلة الشائعة">FAQ</div>
+      <h2 class="h2" data-en-html="Common <span class='gold-word'>Questions</span>" data-ar-html="الأسئلة <span class='gold-word'>الشائعة</span>">Common <span class="gold-word">Questions</span></h2>
+      <div class="divider divider--center"></div>
+    </div>
+    <div class="faq-wrap reveal">
+      <div class="faq-item on">
+        <div class="faq-q">
+          <span data-en="How much does it cost to partner with you?" data-ar="كم تكلفة الشراكة معكم؟">How much does it cost to partner with you?</span>
+          <div class="faq-ico"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+        </div>
+        <div class="faq-a"><div class="faq-a-inner" data-en="Nothing. Zero. We invest in the launch — PPC, content, listing fees, logistics setup. You only supply the product at agreed wholesale pricing. There is no setup fee, no monthly retainer, and no hidden charges." data-ar="لا شيء. صفر. نستثمر في الإطلاق — PPC والمحتوى ورسوم القوائم وإعداد اللوجستيات. أنت تزودنا فقط بالمنتج بسعر الجملة المتفق عليه.">Nothing. Zero. We invest in the launch — PPC, content, listing fees, logistics setup. You only supply the product at agreed wholesale pricing. No setup fee, no monthly retainer, no hidden charges.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">
+          <span data-en="What if my products are already being grey-sold in UAE?" data-ar="ماذا لو كانت منتجاتي تُباع بشكل غير رسمي في الإمارات؟">What if my products are already being grey-sold in UAE?</span>
+          <div class="faq-ico"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+        </div>
+        <div class="faq-a"><div class="faq-a-inner" data-en="This is exactly why you need us. We stop grey market sellers by securing official brand registry and exclusive distribution rights. We protect your pricing integrity and brand image on all Gulf marketplaces." data-ar="هذا بالضبط سبب حاجتك إلينا. نوقف بائعي السوق الرمادية بتأمين تسجيل العلامة التجارية الرسمي وحقوق التوزيع الحصرية.">This is exactly why you need us. We stop grey market sellers by securing official brand registry and exclusive distribution rights. We protect your pricing integrity and brand image on all Gulf marketplaces.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">
+          <span data-en="How long before we see first sales?" data-ar="كم من الوقت قبل أن نرى أول مبيعات؟">How long before we see first sales?</span>
+          <div class="faq-ico"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+        </div>
+        <div class="faq-a"><div class="faq-a-inner" data-en="We aim for first sales within 30 days of the listing going live. Full momentum — consistent organic sales and customer reviews — typically builds within 90 days. Our 1,000+ active seller network provides immediate sales velocity." data-ar="نهدف للمبيعات الأولى خلال 30 يوماً من إطلاق القائمة. الزخم الكامل يتشكل عادةً خلال 90 يوماً. شبكة بائعينا النشطة تزودك بسرعة مبيعات فورية.">We aim for first sales within 30 days of the listing going live. Full momentum typically builds within 90 days. Our 1,000+ seller network provides immediate sales velocity.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">
+          <span data-en="Do I need to travel to UAE or KSA?" data-ar="هل أحتاج إلى السفر إلى الإمارات أو السعودية؟">Do I need to travel to UAE or KSA?</span>
+          <div class="faq-ico"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+        </div>
+        <div class="faq-a"><div class="faq-a-inner" data-en="No. Everything is handled remotely. We manage the entire Gulf operation on your behalf — from customs clearance and warehousing to Amazon and Noon seller accounts, PPC, and monthly reporting." data-ar="لا. كل شيء يُدار عن بُعد. نتولى إدارة العملية الخليجية بالكامل نيابةً عنك.">No. Everything is handled remotely. We manage the entire Gulf operation on your behalf — from customs clearance and warehousing to Amazon and Noon seller accounts, PPC, and monthly reporting.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">
+          <span data-en="How do my existing reviews transfer to Gulf listings?" data-ar="كيف تنتقل تقييماتي الحالية إلى قوائم الخليج؟">How do my existing reviews transfer to Gulf listings?</span>
+          <div class="faq-ico"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+        </div>
+        <div class="faq-a"><div class="faq-a-inner" data-en="Amazon allows review merging across marketplaces for the same ASIN. Your existing global reviews from US, UK, Australia or India count towards your Gulf listings — your brand launches with social proof already built in, not from zero." data-ar="تتيح أمازون دمج التقييمات عبر الأسواق لنفس ASIN. تقييماتك العالمية الحالية تُحتسب في قوائم الخليج — تنطلق علامتك بدليل اجتماعي جاهز.">Amazon allows review merging across marketplaces for the same ASIN. Your existing global reviews count towards Gulf listings — your brand launches with social proof already built in.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">
+          <span data-en="What categories do you work with?" data-ar="ما الفئات التي تعملون معها؟">What categories do you work with?</span>
+          <div class="faq-ico"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+        </div>
+        <div class="faq-a"><div class="faq-a-inner" data-en="Home & Kitchen, Beauty & Health, Sports & Fitness, Baby & Kids, Pet Products, Tools, Electronics accessories, and more. If your brand performs well in any of these categories on your home marketplace, we want to talk." data-ar="المنزل والمطبخ، الجمال والصحة، الرياضة واللياقة، الأطفال، منتجات الحيوانات الأليفة، الأدوات، إكسسوارات الإلكترونيات، والمزيد.">Home &amp; Kitchen, Beauty &amp; Health, Sports &amp; Fitness, Baby &amp; Kids, Pet Products, Tools, Electronics accessories, and more.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">
+          <span data-en="What about customs and import?" data-ar="ماذا عن الجمارك والاستيراد؟">What about customs and import?</span>
+          <div class="faq-ico"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+        </div>
+        <div class="faq-a"><div class="faq-a-inner" data-en="We handle all UAE and KSA customs clearance and import documentation. You ship to our warehouse or use Amazon FBA — your choice. We manage all compliance and regulatory requirements." data-ar="نتولى جميع إجراءات التخليص الجمركي ووثائق الاستيراد في الإمارات والسعودية. أنت ترسل إلى مستودعنا أو تستخدم أمازون FBA.">We handle all UAE and KSA customs clearance and import documentation. You ship to our warehouse or use Amazon FBA — your choice. We manage all compliance and regulatory requirements.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════ -->
+<!-- CTA BANNER -->
+<!-- ═══════════════════════════════════════════════ -->
+<section class="cta-section" id="cta">
+  <div class="cta-glow"></div>
+  <div class="container">
+    <div class="reveal">
+      <div class="tag" style="margin:0 auto 1.5rem" data-en="Ready to Expand?" data-ar="مستعد للتوسع؟">Ready to Expand?</div>
+      <h2 class="h2" style="font-size:clamp(2.2rem,5vw,4rem);max-width:700px;margin:0 auto" data-en-html="Is Your Brand Ready<br>for the <span class='gold-word'>Gulf?</span>" data-ar-html="هل علامتك التجارية<br>جاهزة <span class='gold-word'>للخليج؟</span>">Is Your Brand Ready<br>for the <span class="gold-word">Gulf?</span></h2>
+      <div class="divider divider--center"></div>
+      <p class="sub sub--center" style="margin-bottom:0" data-en="If your products sell well on Amazon US, UK, or Australia — but you have no UAE or KSA presence — we want to talk." data-ar="إذا كانت منتجاتك تبيع بشكل جيد على أمازون في الولايات المتحدة أو المملكة المتحدة أو أستراليا، ولكن ليس لديك حضور في الإمارات أو السعودية — نريد التحدث.">If your products sell well on Amazon US, UK, or Australia — but you have no UAE or KSA presence — we want to talk.</p>
+      <div class="cta-chips">
+        <div class="cta-chip" data-en="✓ 4+ Star Brands Only" data-ar="✓ علامات 4+ نجوم فقط">✓ 4+ Star Brands Only</div>
+        <div class="cta-chip" data-en="✓ Zero Cost to Enter" data-ar="✓ بدون تكلفة">✓ Zero Cost to Enter</div>
+        <div class="cta-chip" data-en="✓ Live in 30 Days" data-ar="✓ إطلاق في 30 يوم">✓ Live in 30 Days</div>
+        <div class="cta-chip" data-en="✓ 1,000+ Ready Buyers" data-ar="✓ +1,000 مشترٍ جاهز">✓ 1,000+ Ready Buyers</div>
+        <div class="cta-chip" data-en="✓ 2-Year Exclusivity" data-ar="✓ حصرية سنتين">✓ 2-Year Exclusivity</div>
+      </div>
+      <a href="#contact" class="btn btn-gold" style="font-size:1.05rem;padding:1.05rem 2.4rem;margin-top:.5rem">
+        <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.41 2 2 0 0 1 3.6 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.6a16 16 0 0 0 5.49 5.49l.97-.97a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <span data-en="Request a Partnership Call" data-ar="طلب مكالمة شراكة">Request a Partnership Call</span>
+      </a>
+      <p style="margin-top:1rem;font-size:.84rem;color:rgba(255,255,255,.38)" data-en="We can have your brand live in the Gulf within 30 days." data-ar="يمكننا إطلاق علامتك في الخليج خلال 30 يوماً.">We can have your brand live in the Gulf within 30 days.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════ -->
+<!-- CONTACT -->
+<!-- ═══════════════════════════════════════════════ -->
+<section class="section section--grey" id="contact">
+  <div class="container">
+    <div class="reveal">
+      <div class="tag" data-en="Get In Touch" data-ar="تواصل معنا">Get In Touch</div>
+      <h2 class="h2 h2--royal" data-en-html="Start Your <span style='color:var(--navy)'>Gulf Journey</span>" data-ar-html="ابدأ <span style='color:var(--navy)'>رحلتك الخليجية</span>">Start Your <span style="color:var(--navy)">Gulf Journey</span></h2>
+      <div class="divider" style="background:linear-gradient(90deg,var(--royal),transparent)"></div>
+    </div>
+    <div class="contact-grid">
+      <div>
+        <div class="c-info-card reveal-l" data-delay="1">
+          <div class="c-ico"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+          <div><h4 data-en="Email" data-ar="البريد الإلكتروني">Email</h4><p>partnerships@nexuseventurescorp.com</p></div>
+        </div>
+        <div class="c-info-card reveal-l" data-delay="2">
+          <div class="c-ico"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.41 2 2 0 0 1 3.6 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.6a16 16 0 0 0 5.49 5.49l.97-.97a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+          <div><h4 data-en="WhatsApp" data-ar="واتساب">WhatsApp</h4><p>+971 50 000 0000</p></div>
+        </div>
+        <div class="c-info-card reveal-l" data-delay="3">
+          <div class="c-ico"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <div><h4 data-en="Registered" data-ar="مسجل في">Registered</h4><p data-en="England & Wales No. 15599446" data-ar="إنجلترا وويلز رقم 15599446">England &amp; Wales No. 15599446</p></div>
+        </div>
+        <div class="c-info-card reveal-l" data-delay="4">
+          <div class="c-ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
+          <div><h4 data-en="Website" data-ar="الموقع">Website</h4><p>www.nexuseventurescorp.com</p></div>
+        </div>
+        <div style="margin-top:1.5rem;padding:1.2rem;background:rgba(26,76,139,.06);border:1px solid rgba(26,76,139,.14);border-radius:12px">
+          <p style="font-size:.83rem;color:rgba(44,44,44,.65);line-height:1.7" data-en="We operate in UAE, KSA, United Kingdom & Canada. Our team responds to all partnership inquiries within 24 hours." data-ar="نعمل في الإمارات والسعودية والمملكة المتحدة وكندا. فريقنا يرد على جميع استفسارات الشراكة خلال 24 ساعة.">We operate in UAE, KSA, United Kingdom &amp; Canada. Our team responds to all partnership inquiries within 24 hours.</p>
+        </div>
+      </div>
+      <!-- FORM -->
+      <div class="reveal-r">
+        <div class="form-card">
+          <h3 style="color:var(--navy);font-size:1.2rem;margin-bottom:1.5rem;font-family:var(--ff-head)" data-en="Send a Partnership Request" data-ar="إرسال طلب شراكة">Send a Partnership Request</h3>
+          <div class="form-row">
+            <div class="fg">
+              <label data-en="Full Name *" data-ar="الاسم الكامل *">Full Name *</label>
+              <input type="text" data-ph-en="Your full name" data-ph-ar="اسمك الكامل" placeholder="Your full name" required/>
+            </div>
+            <div class="fg">
+              <label data-en="Email Address *" data-ar="البريد الإلكتروني *">Email Address *</label>
+              <input type="email" data-ph-en="your@email.com" data-ph-ar="بريدك@الإلكتروني.com" placeholder="your@email.com" required/>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="fg">
+              <label data-en="WhatsApp Number" data-ar="رقم واتساب">WhatsApp Number</label>
+              <input type="tel" data-ph-en="+44 / +971 / +1..." data-ph-ar="+971 / +44 / +1..." placeholder="+44 / +971 / +1..."/>
+            </div>
+            <div class="fg">
+              <label data-en="Brand / Company Name *" data-ar="اسم العلامة / الشركة *">Brand / Company Name *</label>
+              <input type="text" data-ph-en="Your brand name" data-ph-ar="اسم علامتك" placeholder="Your brand name" required/>
+            </div>
+          </div>
+          <div class="fg">
+            <label data-en="I am a..." data-ar="أنا...">I am a...</label>
+            <select>
+              <option data-en="Brand looking for Gulf distribution" data-ar="علامة تجارية تبحث عن التوزيع في الخليج">Brand looking for Gulf distribution</option>
+              <option data-en="Seller looking for exclusive brands" data-ar="بائع يبحث عن علامات حصرية">Seller looking for exclusive brands</option>
+              <option data-en="Media / Press" data-ar="إعلام / صحافة">Media / Press</option>
+              <option data-en="Other" data-ar="أخرى">Other</option>
+            </select>
+          </div>
+          <div class="fg">
+            <label data-en="Amazon Marketplace (where you sell)" data-ar="سوق أمازون (أين تبيع)">Amazon Marketplace (where you sell)</label>
+            <div class="form-checkboxes">
+              <label><input type="checkbox" value="US"/> 🇺🇸 US</label>
+              <label><input type="checkbox" value="UK"/> 🇬🇧 UK</label>
+              <label><input type="checkbox" value="AU"/> 🇦🇺 Australia</label>
+              <label><input type="checkbox" value="DE"/> 🇩🇪 Germany</label>
+              <label><input type="checkbox" value="IN"/> 🇮🇳 India</label>
+              <label><input type="checkbox" value="other"/> <span data-en="Other" data-ar="أخرى">Other</span></label>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="fg">
+              <label data-en="Current Star Rating" data-ar="التقييم الحالي">Current Star Rating</label>
+              <select>
+                <option data-en="5 Stars ⭐⭐⭐⭐⭐" data-ar="5 نجوم ⭐⭐⭐⭐⭐">5 Stars ⭐⭐⭐⭐⭐</option>
+                <option data-en="4-5 Stars ⭐⭐⭐⭐" data-ar="4-5 نجوم ⭐⭐⭐⭐">4-5 Stars ⭐⭐⭐⭐</option>
+                <option data-en="3-4 Stars ⭐⭐⭐" data-ar="3-4 نجوم ⭐⭐⭐">3-4 Stars ⭐⭐⭐</option>
+                <option data-en="Below 3 Stars" data-ar="أقل من 3 نجوم">Below 3 Stars</option>
+              </select>
+            </div>
+            <div class="fg">
+              <label data-en="Monthly Amazon Revenue" data-ar="الإيرادات الشهرية من أمازون">Monthly Amazon Revenue</label>
+              <select>
+                <option data-en="Under $5K" data-ar="أقل من 5K دولار">Under $5K</option>
+                <option data-en="$5K – $20K" data-ar="5K – 20K دولار">$5K – $20K</option>
+                <option data-en="$20K – $50K" data-ar="20K – 50K دولار">$20K – $50K</option>
+                <option data-en="$50K+" data-ar="أكثر من 50K دولار">$50K+</option>
+                <option data-en="Prefer not to say" data-ar="أفضل عدم الإفصاح">Prefer not to say</option>
+              </select>
+            </div>
+          </div>
+          <div class="fg">
+            <label data-en="Message (optional)" data-ar="الرسالة (اختياري)">Message (optional)</label>
+            <textarea data-ph-en="Tell us about your brand and goals..." data-ph-ar="أخبرنا عن علامتك وأهدافك..." placeholder="Tell us about your brand and goals..."></textarea>
+          </div>
+          <button class="btn btn-gold" style="width:100%;justify-content:center;font-size:.97rem;padding:.92rem" onclick="submitForm(this)">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            <span data-en="Send Partnership Request" data-ar="إرسال طلب الشراكة">Send Partnership Request</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════ -->
+<!-- FOOTER -->
+<!-- ═══════════════════════════════════════════════ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-about">
+        <span class="logo-text">Nexus <span>e</span>Ventures Corporation</span>
+        <p data-en="Gulf's #1 international brand distribution company. We launch proven global brands on Amazon & Noon across UAE and Saudi Arabia — zero cost to brand partners." data-ar="شركة توزيع العلامات التجارية الدولية الأولى في الخليج. نطلق العلامات العالمية المثبتة على أمازون ونون في الإمارات والسعودية — بدون تكلفة.">Gulf's #1 international brand distribution company. We launch proven global brands on Amazon &amp; Noon across UAE and Saudi Arabia — zero cost to brand partners.</p>
+        <div class="footer-socials">
+          <a href="#" class="f-social" title="LinkedIn">
+            <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+          <a href="https://wa.me/971500000000" class="f-social" title="WhatsApp">
+            <svg viewBox="0 0 24 24" fill="rgba(255,255,255,.4)"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.106.546 4.086 1.5 5.814L0 24l6.335-1.663A11.942 11.942 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg>
+          </a>
+          <a href="mailto:partnerships@nexuseventurescorp.com" class="f-social" title="Email">
+            <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4 data-en="Navigation" data-ar="التنقل">Navigation</h4>
+        <a href="#about" data-en="About Us" data-ar="من نحن">About Us</a>
+        <a href="#how" data-en="How It Works" data-ar="كيف يعمل">How It Works</a>
+        <a href="#brands-section" data-en="For Brands" data-ar="للعلامات">For Brands</a>
+        <a href="#our-brands" data-en="Our Brands" data-ar="علاماتنا">Our Brands</a>
+        <a href="#contact" data-en="Contact" data-ar="تواصل">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4 data-en="Platforms" data-ar="المنصات">Platforms</h4>
+        <a href="#">Amazon UAE 🇦🇪</a>
+        <a href="#">Amazon KSA 🇸🇦</a>
+        <a href="#">Noon UAE 🇦🇪</a>
+        <a href="#">Noon KSA 🇸🇦</a>
+        <a href="#" data-en="Noon Guru Services" data-ar="نون جورو سيرفيسز">Noon Guru Services</a>
+      </div>
+      <div class="footer-col">
+        <h4 data-en="Markets" data-ar="الأسواق">Markets</h4>
+        <a href="#">🇦🇪 UAE</a>
+        <a href="#">🇸🇦 KSA</a>
+        <a href="#">🇬🇧 United Kingdom</a>
+        <a href="#">🇨🇦 Canada</a>
+        <a href="#" style="margin-top:.4rem;color:rgba(196,154,42,.6);font-size:.75rem" data-en="VAT: GB 467 2495 57" data-ar="ضريبة: GB 467 2495 57">VAT: GB 467 2495 57</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p data-en="© 2026 Nexus eVentures Corporation Ltd. Registered in England & Wales No. 15599446. All rights reserved." data-ar="© 2026 نيكسس إي فينتشرز كوربوريشن المحدودة. مسجلة في إنجلترا وويلز رقم 15599446. جميع الحقوق محفوظة.">© 2026 Nexus eVentures Corporation Ltd. Registered in England &amp; Wales No. 15599446. All rights reserved.</p>
+      <div class="footer-legal">
+        <a href="#" data-en="Privacy" data-ar="الخصوصية">Privacy</a>
+        <a href="#" data-en="Terms" data-ar="الشروط">Terms</a>
+        <a href="#" data-en="Cookies" data-ar="الكوكيز">Cookies</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ═══════════════════════════════════════════════ -->
+<!-- JAVASCRIPT -->
+<!-- ═══════════════════════════════════════════════ -->
+<script>
+// ── NAVBAR STICKY ──
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => nav.classList.toggle('stuck', scrollY > 60), {passive:true});
+
+// ── MOBILE MENU ──
+const ham = document.getElementById('ham');
+const drawer = document.getElementById('drawer');
+const overlay = document.getElementById('overlay');
+const openMenu = () => { ham.classList.add('open'); drawer.classList.add('open'); overlay.classList.add('open'); document.body.style.overflow='hidden' };
+const closeMenu = () => { ham.classList.remove('open'); drawer.classList.remove('open'); overlay.classList.remove('open'); document.body.style.overflow='' };
+ham.addEventListener('click', () => drawer.classList.contains('open') ? closeMenu() : openMenu());
+overlay.addEventListener('click', closeMenu);
+document.querySelectorAll('.drawer-link,.drawer .btn').forEach(a => a.addEventListener('click', closeMenu));
+
+// ── PARTICLES ──
+const pc = document.getElementById('particles');
+for(let i=0;i<55;i++){
+  const p=document.createElement('div'); p.className='particle';
+  const x=Math.random()*100, dur=7+Math.random()*10, delay=Math.random()*10;
+  const size=1+Math.random()*2, gold=Math.random()>.4;
+  p.style.cssText=`left:${x}%;width:${size}px;height:${size}px;background:${gold?'rgba(196,154,42,0.8)':'rgba(255,255,255,0.6)'};animation-duration:${dur}s;animation-delay:-${delay}s;`;
+  pc.appendChild(p);
+}
+
+// ── SCROLL REVEAL ──
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('visible'); io.unobserve(e.target); } });
+}, {threshold:.1, rootMargin:'0px 0px -50px 0px'});
+document.querySelectorAll('.reveal,.reveal-l,.reveal-r,.reveal-s').forEach(el => io.observe(el));
+
+// ── COUNTERS ──
+const cio = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if(!e.isIntersecting) return;
+    const el=e.target, target=+el.dataset.count, suffix=el.dataset.suffix||'', dur=1800, start=performance.now();
+    const tick=now => {
+      const p=Math.min((now-start)/dur,1), ease=p<.5?2*p*p:-1+(4-2*p)*p;
+      el.textContent=Math.floor(ease*target).toLocaleString()+suffix;
+      if(p<1) requestAnimationFrame(tick); else el.textContent=target.toLocaleString()+suffix;
+    };
+    requestAnimationFrame(tick); cio.unobserve(el);
+  });
+},{threshold:.5});
+document.querySelectorAll('.stat-num[data-count]').forEach(c => cio.observe(c));
+
+// ── TESTIMONIAL SLIDER ──
+const tTrack=document.getElementById('tTrack');
+const dots=document.querySelectorAll('.dot');
+let cur=0, total=3, autoT;
+function goTo(i){ cur=((i%total)+total)%total; tTrack.style.transform=`translateX(-${cur*100}%)`; dots.forEach((d,idx)=>d.classList.toggle('on',idx===cur)); }
+function reset(){ clearInterval(autoT); autoT=setInterval(()=>goTo(cur+1),5500); }
+document.getElementById('tNext').addEventListener('click',()=>{goTo(cur+1);reset()});
+document.getElementById('tPrev').addEventListener('click',()=>{goTo(cur-1);reset()});
+dots.forEach(d=>d.addEventListener('click',()=>{goTo(+d.dataset.i);reset()}));
+reset();
+
+// ── FAQ ──
+document.querySelectorAll('.faq-q').forEach(q => {
+  q.addEventListener('click', () => {
+    const item=q.closest('.faq-item'), wasOpen=item.classList.contains('on');
+    document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('on'));
+    if(!wasOpen) item.classList.add('on');
+  });
+});
+
+// ── FORM SUBMIT ──
+function submitForm(btn){
+  const orig=btn.innerHTML;
+  btn.innerHTML=`<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>${isAr?'تم الإرسال!':'Request Submitted!'}</span>`;
+  btn.style.background='linear-gradient(135deg,#1A7A4A,#22a85a)';
+  setTimeout(()=>{btn.innerHTML=orig;btn.style.background=''},4500);
+}
+
+// ── LANGUAGE TOGGLE ──
+let isAr=false;
+const langBtn=document.getElementById('langBtn');
+
+function applyLang(ar){
+  const html=document.documentElement;
+  html.dir=ar?'rtl':'ltr';
+  html.lang=ar?'ar':'en';
+  langBtn.textContent=ar?'EN':'عر';
+  document.body.style.fontFamily=ar?"'Tajawal',sans-serif":"'Outfit',sans-serif";
+
+  document.querySelectorAll('[data-en],[data-ar]').forEach(el=>{
+    const key=ar?'ar':'en';
+    if(el.hasAttribute(`data-${key}`)){
+      if(el.tagName==='INPUT'||el.tagName==='TEXTAREA'){
+        const phKey=`data-ph-${key}`;
+        if(el.hasAttribute(phKey)) el.placeholder=el.getAttribute(phKey);
+      } else if(el.tagName==='OPTION'){
+        const val=el.getAttribute(`data-${key}`);
+        if(val) el.textContent=val;
+      } else {
+        const val=el.getAttribute(`data-${key}`);
+        if(val) el.innerHTML=val;
+      }
+    }
+  });
+
+  document.querySelectorAll('[data-en-html],[data-ar-html]').forEach(el=>{
+    const key=ar?'data-ar-html':'data-en-html';
+    if(el.hasAttribute(key)) el.innerHTML=el.getAttribute(key);
+  });
+
+  // Trust pill
+  const tp=document.querySelector('.trust-pill p');
+  if(tp) tp.innerHTML=ar
+    ?'موثوق من <strong>+1,000</strong> بائع في الإمارات والسعودية والمملكة المتحدة وكندا'
+    :'Trusted by <strong>1,000+</strong> sellers across UAE, KSA, UK &amp; Canada';
+
+  // Testimonial quotes
+  document.querySelectorAll('.t-quote').forEach(q=>{
+    const k=ar?'data-ar':'data-en';
+    if(q.hasAttribute(k)) q.innerHTML=q.getAttribute(k);
+  });
+
+  // Re-run counters display
+  document.querySelectorAll('.stat-num[data-count]').forEach(el=>{
+    el.textContent=(+el.dataset.count).toLocaleString()+(el.dataset.suffix||'');
+  });
+
+  // RTL for timeline
+  document.querySelectorAll('.tl-line').forEach(l=>{
+    l.style.left=ar?'auto':'28px';
+    l.style.right=ar?'28px':'auto';
+  });
+}
+
+langBtn.addEventListener('click',()=>{ isAr=!isAr; applyLang(isAr); });
+</script>
+</body>
+</html>
