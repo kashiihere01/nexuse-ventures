@@ -366,7 +366,7 @@ export function Footer({ lang }: { lang: Lang }) {
           <Logo lang={lang} />
           <p>{isAr ? "شركة توزيع علامات دولية تطلق العلامات المثبتة على أمازون ونون في الإمارات والسعودية." : "Gulf brand distribution company launching proven global brands on Amazon and Noon across UAE and Saudi Arabia."}</p>
           <div className="socials">
-            <a href="mailto:partnerships@nexuseventurescorp.com" aria-label="Email">
+            <a href="mailto:info@nexuseventurescorp.com" aria-label="Email">
               <Icon name="mail" />
             </a>
             <a href="https://www.linkedin.com" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
