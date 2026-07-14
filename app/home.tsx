@@ -139,7 +139,7 @@ export function HomePage({ lang }: { lang: Lang }) {
 
         <section className="contact-strip">
           <h2>{lang === "ar" ? "ابدأ رحلتك الخليجية" : "Start Your Gulf Journey"}</h2>
-          <p>partnerships@nexuseventurescorp.com</p>
+          <p>info@nexuseventurescorp.com</p>
           <Link className="btn btn-navy" href={lang === "ar" ? "/ar/contact" : "/contact"}>
             {t.apply}
           </Link>
