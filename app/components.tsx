@@ -386,8 +386,8 @@ export function Footer({ lang }: { lang: Lang }) {
         </div>
         <div>
           <h3>{isAr ? "التواصل" : "Contact"}</h3>
-          <p>partnerships@nexuseventurescorp.com</p>
-          <p>{isAr ? "واتساب: يضاف لاحقاً" : "WhatsApp: to be confirmed"}</p>
+          <p>info@nexuseventurescorp.com</p>
+          <p>{isAr ? "واتساب: يضاف لاحقاً" : "WhatsApp: +44 7737 138827"}</p>
           <p>www.nexuseventurescorp.com</p>
         </div>
         <div>

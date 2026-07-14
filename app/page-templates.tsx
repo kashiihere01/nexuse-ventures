@@ -236,7 +236,7 @@ export function LegacyContactPage({ lang }: { lang: Lang }) {
           <div className="contact-card">
             <h2>{ar ? "بيانات التواصل" : "Contact Details"}</h2>
             <p><strong>Email:</strong> partnerships@nexuseventurescorp.com</p>
-            <p><strong>{ar ? "واتساب:" : "WhatsApp:"}</strong> {ar ? "يضاف لاحقاً" : "to be confirmed"}</p>
+            <p><strong>{ar ? "واتساب:" : "WhatsApp:"}</strong> {ar ? "يضاف لاحقاً" : "+44 7737 138827"}</p>
             <p><strong>UK Company:</strong> Nexus eVentures Corporation Ltd</p>
             <p><strong>VAT:</strong> GB 467 2495 57</p>
             <p>151 Lapage Street, Bradford, England, BD3 8AF</p>
