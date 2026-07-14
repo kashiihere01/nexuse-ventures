@@ -1,445 +1,431 @@
-import { BrandPortfolio } from "./brand-portfolio";
-import { CTA, Hero, Icon, PageIntro, PlatformLogo, SectionHeader, SiteShell } from "./components";
-import { copy, Lang, platformLogos } from "./content";
+import Link from "next/link";
+import { brandName, brands, copy, Lang, platformLogos, routes } from "./content";
+import { RouteMotion } from "./route-motion";
+import { ScrollReveal } from "./scroll-reveal";
 
-export function AboutPage({ lang }: { lang: Lang }) {
-  const ar = lang === "ar";
+const imageMap = {
+  skyline:
+    "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1800&q=80",
+  warehouse:
+    "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1400&q=80",
+  commerce:
+    "https://images.unsplash.com/photo-1556742502-ec7c0e9f34b1?auto=format&fit=crop&w=1400&q=80",
+  meeting:
+    "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1400&q=80",
+};
 
+const brandImages = [
+  "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=900&q=80",
+  "https://images.unsplash.com/photo-1587854692152-cbe660dbde88?auto=format&fit=crop&w=900&q=80",
+  "https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=900&q=80",
+  "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?auto=format&fit=crop&w=900&q=80",
+  "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=900&q=80",
+  "https://images.unsplash.com/photo-1619451334792-150fd785ee74?auto=format&fit=crop&w=900&q=80",
+  "https://images.unsplash.com/photo-1616046229478-9901c5536a45?auto=format&fit=crop&w=900&q=80",
+  "https://images.unsplash.com/photo-1564890369478-c89ca6d9cde9?auto=format&fit=crop&w=900&q=80",
+  "https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?auto=format&fit=crop&w=900&q=80",
+  "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=900&q=80",
+];
+
+export function Logo({ lang, dark = false }: { lang: Lang; dark?: boolean }) {
   return (
-    <SiteShell lang={lang}>
-      <Hero
-        lang={lang}
-        image="meeting"
-        title={ar ? "نصل أفضل علامات العالم بالخليج" : "Connecting the World's Best Brands to the Gulf"}
-        subtitle={ar ? "جذور خليجية. اتصال عالمي. مبني للعلامات التي تستحق أكثر." : "Gulf-rooted. Globally connected. Built for brands that deserve more."}
-      />
-      <PageIntro>
-        <section className="story-grid">
-          <div>
-            <SectionHeader title={ar ? "قصتنا" : "Our Story"} />
-            <p>{ar ? "تأسست نيكسس إي فينتشرز كوربوريشن على يد مدسر غلزار بمهمة واضحة: أن تكون الجسر بين العلامات الدولية المثبتة وسوق التجارة الإلكترونية الخليجي سريع النمو." : "Nexus eVentures Corporation was founded by Mudassir Gulzar with a clear mission: to bridge proven international brands with the Gulf's rapidly growing e-commerce market."}</p>
-            <p>{ar ? "نحدد العلامات التي تحقق أداءً قوياً في الولايات المتحدة والمملكة المتحدة وأستراليا وأوروبا، لكنها لا تملك حضوراً في الإمارات أو السعودية. ثم نؤمّن حقوق التوزيع ونطلقها على أمازون ونون." : "We identify brands performing strongly in the US, UK, Australia and Europe, but with no UAE or KSA presence. Then we secure distribution rights and launch them across Amazon and Noon."}</p>
-            <p>{ar ? "لسنا شركة لوجستية فقط. نحن شريك نمو للعلامة، نبدأ بالجملة لبناء الترتيب والمراجعات، ثم نفعّل الحصرية لحماية الربحية على المدى الطويل." : "We are not only a logistics company. We are a brand growth partner, starting with wholesale to build rank and reviews, then activating exclusivity to protect long-term profitability."}</p>
-          </div>
-          <aside className="image-panel warehouse-panel" />
-        </section>
-
-        <section className="soft-section">
-          <SectionHeader title={ar ? "معايير الشراكة" : "Our Partnership Criteria"} sub={ar ? "نختار العلامات التي تستوفي كل هذه الشروط." : "We only partner with brands that meet every standard below."} />
-          <div className="criteria-grid">
-            {[
-              [ar ? "التقييم" : "Star Rating", ar ? "4.0 نجوم كحد أدنى في السوق الأساسي" : "Minimum 4.0 stars on the home marketplace"],
-              [ar ? "المراجعات" : "Review Count", ar ? "1,000 مراجعة حقيقية على الأقل" : "Minimum 1,000 genuine reviews"],
-              [ar ? "لا حضور خليجي" : "No Gulf Presence", ar ? "لا تعمل حالياً على أمازون الإمارات أو السعودية أو نون" : "Not currently operating on Amazon UAE, KSA or Noon"],
-              [ar ? "علامة حقيقية" : "Real Brand", ar ? "شركة مسجلة وهوية علامة قابلة للتحقق" : "Registered company with verifiable brand identity"],
-              [ar ? "جودة المنتج" : "Product Quality", ar ? "منتجات أصلية وآمنة ومتوافقة" : "Genuine, safe and compliant products"],
-              [ar ? "مدة الشراكة" : "Partnership Term", ar ? "اتفاق توزيع لمدة سنتين على الأقل" : "Minimum 2-year distribution agreement"],
-            ].map(([title, body]) => (
-              <article key={title}>
-                <Icon name="check" />
-                <h3>{title}</h3>
-                <p>{body}</p>
-              </article>
-            ))}
-          </div>
-        </section>
-
-        <section className="note-panel">
-          <h2>{ar ? "لماذا تهم المراجعات؟" : "Why Reviews Matter"}</h2>
-          <p>{ar ? "عند إطلاق علامة في الخليج، يمكن دمج مراجعات القوائم من الأسواق الحالية مثل الولايات المتحدة والمملكة المتحدة وأستراليا والهند في قوائم الإمارات والسعودية لنفس ASIN. لذلك تنطلق علامتك بدليل اجتماعي جاهز، وليس من الصفر." : "When we launch a brand in the Gulf, existing marketplace reviews from the US, UK, Australia, India and other regions can be merged into the new UAE and KSA listings for the same ASIN. Your brand launches with social proof already built in, not from zero."}</p>
-        </section>
-
-        <section>
-          <SectionHeader title={ar ? "أسواقنا" : "Our Markets"} />
-          <div className="market-table">
-            {[
-              ["United Arab Emirates", "Erha Impex", "Amazon UAE + Noon UAE"],
-              ["Kingdom of Saudi Arabia", "KSA partner company", "Amazon KSA + Noon KSA"],
-              ["United Kingdom", "Nexus eVentures Corporation Ltd", "HQ and global operations"],
-              ["Canada", "Nexus eVentures Corporation Ltd", "Growing client base"],
-            ].map(([country, entity, role]) => (
-              <div key={country}>
-                <strong>{country}</strong>
-                <span>{entity}</span>
-                <p>{role}</p>
-              </div>
-            ))}
-          </div>
-        </section>
-        <CTA lang={lang} />
-      </PageIntro>
-    </SiteShell>
+    <span className={`logo ${dark ? "logo-dark" : ""}`} aria-label={brandName[lang]}>
+      {lang === "ar" ? (
+        brandName.ar
+      ) : (
+        <>
+          Nexus <span>e</span>Ventures Corporation
+        </>
+      )}
+    </span>
   );
 }
 
-export function HowItWorksPage({ lang }: { lang: Lang }) {
-  const ar = lang === "ar";
-  const steps = ar
-    ? ["بحث العلامة", "نتواصل معك", "مكالمة تعريفية", "توقيع الاتفاق", "توريد المنتج", "الإطلاق", "مرحلة الجملة", "تفعيل الحصرية", "تقارير شهرية", "التجديد"]
-    : ["Brand Research", "We Contact You", "Discovery Call", "Agreement Signed", "Product Supply", "Launch", "Wholesale Phase", "Exclusivity Active", "Monthly Reports", "Renewal"];
-
-  return (
-    <SiteShell lang={lang}>
-      <Hero lang={lang} image="warehouse" title={ar ? "كيف نحمي علامتك ونبني زخم الخليج" : "How We Protect Your Brand While Building Gulf Momentum"} subtitle={ar ? "نعمل على مرحلتين: الجملة أولاً، ثم الحصرية. هذا النموذج يقلل المخاطر ويحمي قيمة العلامة." : "We operate in two phases: wholesale first, then exclusive. This model reduces risk and protects brand value."} />
-      <PageIntro>
-        <section className="how-phase">
-          <article>
-            <span>01</span>
-            <h2>{ar ? "مرحلة الجملة: الأشهر 1 إلى 6" : "Phase 1: Wholesale Distribution"}</h2>
-            <p>{ar ? "نشتري منتجاتك بسعر جملة متفق عليه ونبيعها على أمازون ونون، مع بناء ترتيب المبيعات وإطلاق الإعلانات والمحتوى العربي وتحمل تكاليف الإعداد." : "We purchase products at an agreed wholesale price and sell them on Amazon and Noon while building BSR, launching PPC, creating Arabic content and absorbing setup costs."}</p>
-          </article>
-          <article>
-            <span>02</span>
-            <h2>{ar ? "مرحلة الحصرية: بعد الشهر السادس" : "Phase 2: Exclusive Distribution"}</h2>
-            <p>{ar ? "بعد إثبات المبيعات، نفعّل حقوق التوزيع الحصرية لحماية صندوق الشراء ومنع السوق الرمادي وتغذية شبكة أكثر من 1,000 بائع." : "After proven sales, we activate exclusive rights to protect the Buy Box, stop grey-market sellers and supply our 1,000+ seller network."}</p>
-          </article>
-        </section>
-        <section className="note-panel">
-          <h2>{ar ? "لماذا ينجح هذا النموذج؟" : "Why This Model Works"}</h2>
-          <p>{ar ? "بدون حصرية، يستطيع بائعون آخرون نسخ القائمة والمنافسة على صندوق الشراء. مرحلة الجملة تبني الترتيب والمراجعات أولاً، ثم تجعل الحصرية أقوى وأكثر ربحية." : "Without exclusivity, other sellers can copy a listing and compete for the Buy Box. The wholesale phase builds rank and reviews first, making exclusivity stronger and more profitable."}</p>
-        </section>
-        <section>
-          <SectionHeader title={ar ? "العملية خطوة بخطوة" : "Full Step-by-Step Process"} />
-          <div className="launch-process">
-            {steps.map((step, index) => (
-              <article key={step}>
-                <span>{index + 1}</span>
-                <h3>{step}</h3>
-                <p>{ar ? "خطوة واضحة ضمن رحلة إطلاق العلامة، مع إدارة كاملة للتفاصيل التشغيلية والتقارير." : "A clear step in the launch journey, with full operational handling and reporting from our team."}</p>
-              </article>
-            ))}
-          </div>
-        </section>
-        <CTA lang={lang} />
-      </PageIntro>
-    </SiteShell>
-  );
-}
-
-export function ForBrandsPage({ lang }: { lang: Lang }) {
-  const ar = lang === "ar";
+export function SiteShell({ lang, children }: { lang: Lang; children: React.ReactNode }) {
   const t = copy[lang];
-  const faqs = ar
-    ? [["كم التكلفة؟", "لا شيء. نستثمر في الإطلاق والمحتوى والإعلانات."], ["متى تبدأ المبيعات؟", "نستهدف أول مبيعات خلال 30 يوماً من نشر القوائم."], ["هل أحتاج للسفر؟", "لا. ندير العملية بالكامل عن بُعد."], ["كيف تنتقل المراجعات؟", "تستطيع أمازون دمج مراجعات نفس ASIN عبر الأسواق."]]
-    : [["How much does it cost?", "Nothing. We invest in launch, content and PPC."], ["How long before sales?", "We aim for first sales within 30 days of listings going live."], ["Do I need to travel?", "No. Everything can be handled remotely."], ["How do reviews transfer?", "Amazon can merge reviews for the same ASIN across marketplaces."]];
+  const isAr = lang === "ar";
 
   return (
-    <SiteShell lang={lang}>
-      <Hero lang={lang} image="commerce" title={ar ? "علامتك. خليجنا. نمو بلا حدود." : "Your Brand. Our Gulf. Unlimited Growth."} subtitle={ar ? "نطلق علامتك على أمازون الإمارات والسعودية ونون، بدون تكلفة وبدون مخاطرة وبإدارة كاملة." : "We launch your brand on Amazon UAE, KSA and Noon: zero cost, zero risk and fully handled."} />
-      <PageIntro>
-        <section className="brand-fit">
-          <div className="brand-fit-copy">
-            <span>{ar ? "معايير القبول" : "Partnership fit"}</span>
-            <h2>{ar ? "نبحث عن علامات مثبتة، لا أفكار غير مجربة." : "We want proven brands, not untested ideas."}</h2>
-            <p>{ar ? "إذا كانت علامتك تبيع بالفعل في سوق دولي ولا تملك حضوراً خليجياً منظماً، فهذا هو بالضبط النوع الذي نبني له إطلاقاً قوياً." : "If your brand already sells in a major international marketplace and does not have a structured Gulf presence, this is exactly the kind of launch we build."}</p>
-          </div>
-          <div className="fit-list">
-            {(ar
-              ? ["تقييم 4.0+ مع مراجعات حقيقية", "لا حضور منظم في الإمارات أو السعودية", "شركة مسجلة وهوية علامة واضحة", "استعداد لشراكة توزيع لمدة سنتين", "منتجات قابلة للامتثال والشحن"]
-              : ["4.0+ rating with real reviews", "No structured UAE or KSA presence", "Registered company with clear brand identity", "Open to a 2-year distribution partnership", "Products ready for compliance and shipping"]
-            ).map((item) => (
-              <p key={item}><Icon name="check" />{item}</p>
+    <div className={isAr ? "site rtl" : "site"} dir={isAr ? "rtl" : "ltr"}>
+      <RouteMotion />
+      <ScrollReveal />
+      <header className="nav-wrap">
+        <nav className="nav">
+          <Link href={isAr ? "/ar" : "/"} className="nav-logo">
+            <Logo lang={lang} />
+          </Link>
+          <input id="nav-toggle" className="nav-toggle" type="checkbox" aria-label="Toggle navigation" />
+          <label className="hamburger" htmlFor="nav-toggle">
+            <span />
+            <span />
+            <span />
+          </label>
+          <div className="nav-links">
+            {routes.map((route) => (
+              <Link key={route.href} href={isAr ? route.arHref : route.href}>
+                {isAr ? route.ar : route.en}
+              </Link>
             ))}
+            <Link className="lang-switch" href={isAr ? "/" : "/ar"}>
+              {isAr ? "EN" : "عر"}
+            </Link>
+            <Link className="btn btn-gold" href={isAr ? "/ar/contact" : "/contact"}>
+              {t.partner}
+            </Link>
           </div>
-        </section>
-
-        <section className="deal-models">
-          <div className="deal-head">
-            <span>{ar ? "نموذجان للشراكة" : "Two ways to partner"}</span>
-            <h2>{ar ? "اختر نموذجاً يناسب طريقة نمو علامتك." : "Choose the model that fits how your brand wants to grow."}</h2>
-          </div>
-          <article className="deal-card">
-            <div>
-              <span>A</span>
-              <h3>{ar ? "مشاركة الإيرادات" : "Revenue Share"}</h3>
-              <p>{ar ? "نبيع نيابة عنك، مع بقاء قرارات التسعير أقرب إلى العلامة." : "We sell on your behalf while keeping pricing decisions closer to the brand."}</p>
-            </div>
-            <strong>60 / 40</strong>
-            <small>{ar ? "للعلامة / نيكسس" : "brand / Nexus"}</small>
-          </article>
-          <article className="deal-card highlighted">
-            <div>
-              <span>B</span>
-              <h3>{ar ? "الجملة" : "Wholesale"}</h3>
-              <p>{ar ? "نشتري المنتجات مباشرة بسعر جملة ونبني الطلب الخليجي من خلال قنواتنا." : "We buy products outright at wholesale price and build Gulf demand through our channels."}</p>
-            </div>
-            <strong>{ar ? "أوامر شراء" : "Purchase orders"}</strong>
-            <small>{ar ? "مخاطرة أقل على العلامة" : "lower brand risk"}</small>
-          </article>
-        </section>
-
-        <section className="soft-section">
-          <SectionHeader title={ar ? "ما يشمله النموذج" : "What Both Models Include"} />
-          <div className="benefit-grid compact">
-            {["Full listing creation", "Arabic and English content", "PPC advertising", "Monthly reporting", "Buy Box protection", "1,000+ seller network"].map((item) => (
-              <article key={item}><Icon name="check" /><h3>{ar ? translateShort(item) : item}</h3></article>
-            ))}
-          </div>
-        </section>
-
-        <section className="ownership-split">
-          <article>
-            <span>{ar ? "أنت تحتفظ" : "You keep"}</span>
-            {(ar
-              ? ["ملكية العلامة عالمياً", "عملياتك خارج الإمارات والسعودية", "حق مراجعة المواد التسويقية", "رؤية واضحة للتقارير الشهرية"]
-              : ["Global brand ownership", "Operations outside UAE and KSA", "Right to review Gulf marketing", "Clear monthly reporting visibility"]
-            ).map((item) => <p key={item}><Icon name="check" />{item}</p>)}
-          </article>
-          <article>
-            <span>{ar ? "نحن ندير" : "We handle"}</span>
-            {(ar
-              ? ["أمازون الإمارات والسعودية ونون", "المحتوى العربي والإنجليزي", "الإعلانات وحماية صندوق الشراء", "شبكة 1,000+ بائع"]
-              : ["Amazon UAE, Amazon KSA and Noon", "Arabic and English content", "PPC and Buy Box protection", "1,000+ seller client network"]
-            ).map((item) => <p key={item}><Icon name="check" />{item}</p>)}
-          </article>
-        </section>
-
-        <section>
-          <SectionHeader title={ar ? "الأسئلة الشائعة" : "FAQ"} />
-          <div className="faq-list">
-            {faqs.map(([q, a]) => (
-              <details key={q}>
-                <summary>{q}</summary>
-                <p>{a}</p>
-              </details>
-            ))}
-          </div>
-        </section>
-        <CTA lang={lang} button={t.apply} />
-      </PageIntro>
-    </SiteShell>
+        </nav>
+      </header>
+      {children}
+      <Footer lang={lang} />
+    </div>
   );
 }
 
-export function OurBrandsPage({ lang }: { lang: Lang }) {
-  const ar = lang === "ar";
-
-  return (
-    <SiteShell lang={lang}>
-      <Hero lang={lang} title={ar ? "محفظة علاماتنا الحصرية" : "Our Exclusive Brand Portfolio"} subtitle={ar ? "علامات مختارة بعناية يحصل عليها البائعون والعملاء في الخليج عبر قنوات موثوقة." : "Curated brands made available to Gulf sellers and shoppers through trusted marketplace channels."} />
-      <PageIntro>
-        <BrandPortfolio lang={lang} />
-        <CTA lang={lang} title={ar ? "هل علامتك غير موجودة في هذه القائمة؟" : "Is Your Brand Missing From This List?"} sub={ar ? "نبحث باستمرار عن شركاء جدد في كل الفئات." : "We are actively seeking new brand partners in every category."} />
-      </PageIntro>
-    </SiteShell>
-  );
-}
-
-export function LegacyContactPage({ lang }: { lang: Lang }) {
-  const ar = lang === "ar";
-
-  return (
-    <SiteShell lang={lang}>
-      <Hero lang={lang} image="meeting" title={ar ? "أرسل طلب شراكة" : "Send a Partnership Request"} subtitle={ar ? "أخبرنا عن علامتك أو احتياجك، وسنراجع فرصة التوسع في الخليج." : "Tell us about your brand or seller needs, and we will review the Gulf expansion opportunity."} />
-      <PageIntro>
-        <section className="contact-grid">
-          <div className="contact-card">
-            <h2>{ar ? "بيانات التواصل" : "Contact Details"}</h2>
-            <p><strong>Email:</strong> partnerships@nexuseventurescorp.com</p>
-            <p><strong>{ar ? "واتساب:" : "WhatsApp:"}</strong> {ar ? "يضاف لاحقاً" : "+44 7737 138827"}</p>
-            <p><strong>UK Company:</strong> Nexus eVentures Corporation Ltd</p>
-            <p><strong>VAT:</strong> GB 467 2495 57</p>
-            <p>151 Lapage Street, Bradford, England, BD3 8AF</p>
-            <div className="mini-platforms">
-              {platformLogos.map((platform) => <PlatformLogo key={platform.name} type={platform.kind} />)}
-            </div>
-          </div>
-          <form className="contact-form">
-            {[
-              ar ? "الاسم الكامل" : "Full Name",
-              ar ? "البريد الإلكتروني" : "Email Address",
-              ar ? "رقم واتساب" : "WhatsApp Number",
-              ar ? "اسم العلامة / الشركة" : "Brand / Company Name",
-            ].map((label) => (
-              <label key={label}>{label}<input required={label !== (ar ? "رقم واتساب" : "WhatsApp Number")} /></label>
-            ))}
-            <label>{ar ? "أنا" : "I am a"}<select><option>{ar ? "علامة تبحث عن توزيع خليجي" : "Brand looking for Gulf distribution"}</option><option>{ar ? "بائع يبحث عن علامات حصرية" : "Seller looking for exclusive brands"}</option><option>{ar ? "إعلام / صحافة" : "Media / Press"}</option></select></label>
-            <label>{ar ? "التقييم الحالي على أمازون" : "Current star rating on Amazon"}<select><option>5 stars</option><option>4-5 stars</option><option>3-4 stars</option><option>Below 3 stars</option></select></label>
-            <label>{ar ? "الرسالة" : "Message"}<textarea rows={5} /></label>
-            <button className="btn btn-gold" type="submit">{ar ? "إرسال طلب الشراكة" : "Send Partnership Request"}</button>
-          </form>
-        </section>
-      </PageIntro>
-    </SiteShell>
-  );
-}
-
-export function ContactPage({ lang }: { lang: Lang }) {
-  const ar = lang === "ar";
-  const contactStats = ar
-    ? [["30", "يوماً كهدف للإطلاق"], ["4", "منصات سوقية"], ["1,000+", "ضمن شبكة البائعين"]]
-    : [["30", "day launch target"], ["4", "marketplaces covered"], ["1,000+", "seller network"]];
-  const contactSteps = ar
-    ? [
-        ["01", "مراجعة العلامة", "نراجع الفئة، التقييمات الحالية، حضورك في الأسواق، وفرصة الطلب في الخليج."],
-        ["02", "خطة الإطلاق", "نحدد المسار الأنسب للإمارات والسعودية، وترتيب المنصات، ونموذج التشغيل."],
-        ["03", "مسار الاتفاق", "إذا كانت الفرصة مناسبة، ننتقل إلى شروط الجملة أو التوزيع الحصري."],
-      ]
-    : [
-        ["01", "Brand review", "We check category fit, existing reviews, current marketplace traction, and Gulf demand."],
-        ["02", "Launch plan", "You receive the recommended UAE and KSA route, platform sequence, and operating model."],
-        ["03", "Agreement path", "If the fit is strong, we move into wholesale or exclusive distribution terms."],
-      ];
-
-  return (
-    <SiteShell lang={lang}>
-      <Hero
-        lang={lang}
-        image="meeting"
-        title={ar ? "ابدأ شراكة خليجية" : "Start a Gulf Partnership"}
-        subtitle={
-          ar
-            ? "أخبرنا عن علامتك ومنتجاتك وأدائك في الأسواق، وسنراجع فرصة الإطلاق في الخليج."
-            : "Tell us about your brand, products, and marketplace traction. We will review the Gulf launch opportunity and respond with next steps."
-        }
-      />
-      <PageIntro>
-        <section className="contact-page-grid">
-          <div className="contact-panel">
-            <div>
-              <span className="contact-kicker">{ar ? "طلب شراكة" : "Partnership intake"}</span>
-              <h2>{ar ? "أرسل لنا العلامة. نرسم لها طريق الخليج." : "Bring us the brand. We'll map the Gulf route."}</h2>
-              <p>
-                {ar
-                  ? "استخدم هذه الصفحة لطلبات توزيع العلامات، وصول البائعين، أو الشراكات. أفضل الطلبات تتضمن روابط السوق، التقييمات الحالية، والفئات المستهدفة."
-                  : "Use this page for brand distribution, seller access, or partnership enquiries. The strongest submissions include marketplace links, current ratings, and target categories."}
-              </p>
-            </div>
-
-            <div className="contact-statline" aria-label="Contact proof points">
-              {contactStats.map(([value, label]) => (
-                <span key={label}>
-                  <strong>{value}</strong>
-                  {label}
-                </span>
-              ))}
-            </div>
-
-            <div className="contact-routes">
-              <a href="mailto:partnerships@nexuseventurescorp.com">
-                <Icon name="mail" />
-                <span>
-                  <strong>partnerships@nexuseventurescorp.com</strong>
-                  {ar ? "البريد المباشر للشراكات" : "Direct partnership inbox"}
-                </span>
-              </a>
-              <div>
-                <Icon name="globe" />
-                <span>
-                  <strong>Amazon UAE, Amazon KSA, Noon UAE, Noon KSA</strong>
-                  {ar ? "أسواق الإطلاق التي نراجعها لكل علامة" : "Launch markets we review for every fit"}
-                </span>
-              </div>
-              <div>
-                <Icon name="shield" />
-                <span>
-                  <strong>Nexus eVentures Corporation Ltd</strong>
-                  {ar ? "شركة بريطانية مع تشغيل للأسواق الخليجية" : "UK company with Gulf marketplace operations"}
-                </span>
-              </div>
-            </div>
-
-            <div className="mini-platforms">
-              {platformLogos.map((platform) => (
-                <PlatformLogo key={platform.name} type={platform.kind} />
-              ))}
-            </div>
-          </div>
-
-          <form className="contact-form contact-form-elevated">
-            <div className="form-heading">
-              <span>{ar ? "نموذج الطلب" : "Request form"}</span>
-              <h2>{ar ? "أخبرنا ماذا تريد أن تطلق." : "Tell us what you want to launch."}</h2>
-              <p>{ar ? "شاركنا معلومات كافية لمراجعة جادة، وسنرد بالخطوة التالية الأنسب." : "Share enough context for a serious first review. We will respond with the most relevant next step."}</p>
-            </div>
-
-            <div className="form-row">
-              <label>
-                {ar ? "الاسم الكامل" : "Full name"}
-                <input required placeholder={ar ? "اسمك" : "Your name"} />
-              </label>
-              <label>
-                {ar ? "البريد المهني" : "Work email"}
-                <input required type="email" placeholder="name@company.com" />
-              </label>
-            </div>
-
-            <div className="form-row">
-              <label>
-                {ar ? "العلامة / الشركة" : "Brand / company"}
-                <input required placeholder={ar ? "اسم العلامة" : "Brand name"} />
-              </label>
-              <label>
-                {ar ? "واتساب" : "WhatsApp"}
-                <input placeholder="+44 / +971 / +966" />
-              </label>
-            </div>
-
-            <div className="form-row">
-              <label>
-                {ar ? "نوع الطلب" : "Enquiry type"}
-                <select>
-                  <option>{ar ? "علامة تبحث عن توزيع خليجي" : "Brand looking for Gulf distribution"}</option>
-                  <option>{ar ? "بائع يبحث عن علامات حصرية" : "Seller looking for exclusive brands"}</option>
-                  <option>{ar ? "منصة أو شريك استراتيجي" : "Marketplace / strategic partner"}</option>
-                  <option>{ar ? "إعلام / صحافة" : "Media / Press"}</option>
-                </select>
-              </label>
-              <label>
-                {ar ? "التقييم الحالي" : "Current rating"}
-                <select>
-                  <option>{ar ? "4.5+ نجوم" : "4.5+ stars"}</option>
-                  <option>{ar ? "4.0-4.5 نجوم" : "4.0-4.5 stars"}</option>
-                  <option>{ar ? "3.5-4.0 نجوم" : "3.5-4.0 stars"}</option>
-                  <option>{ar ? "غير موجودة حالياً على أمازون" : "Not currently on Amazon"}</option>
-                </select>
-              </label>
-            </div>
-
-            <label>
-              {ar ? "رابط السوق أو الموقع" : "Marketplace or website link"}
-              <input placeholder={ar ? "رابط أمازون أو موقع العلامة" : "Amazon, brand site, or marketplace URL"} />
-            </label>
-
-            <label>
-              {ar ? "ما الذي يجب أن نعرفه؟" : "What should we know?"}
-              <textarea rows={5} placeholder={ar ? "الفئة، أهم المنتجات، الأسواق الحالية، المبيعات الشهرية، أو أهداف الخليج." : "Category, top products, current markets, monthly sales, or Gulf goals."} />
-            </label>
-
-            <button className="btn btn-gold" type="submit">{ar ? "إرسال طلب الشراكة" : "Send Partnership Request"}</button>
-          </form>
-        </section>
-
-        <section className="contact-workflow" aria-label="What happens after you contact Nexus eVentures">
-          <div className="contact-workflow-head">
-            <span className="contact-kicker">{ar ? "بعد الإرسال" : "After you submit"}</span>
-            <h2>{ar ? "ماذا يحدث بعد ذلك" : "What happens next"}</h2>
-          </div>
-          <div className="contact-workflow-list">
-            {contactSteps.map(([number, title, body]) => (
-              <article key={title}>
-                <span>{number}</span>
-                <div>
-                  <h3>{title}</h3>
-                  <p>{body}</p>
-                </div>
-              </article>
-            ))}
-          </div>
-        </section>
-      </PageIntro>
-    </SiteShell>
-  );
-}
-
-function translateShort(item: string) {
-  const map: Record<string, string> = {
-    "Full listing creation": "إنشاء القوائم بالكامل",
-    "Arabic and English content": "محتوى عربي وإنجليزي",
-    "PPC advertising": "إعلانات PPC",
-    "Monthly reporting": "تقارير شهرية",
-    "Buy Box protection": "حماية صندوق الشراء",
-    "1,000+ seller network": "شبكة 1,000+ بائع",
+export function Icon({ name }: { name: "search" | "shield" | "rocket" | "chart" | "globe" | "box" | "check" | "mail" | "linkedin" | "instagram" | "facebook" | "arrow" }) {
+  const paths = {
+    search: "M10 18a8 8 0 1 1 5.3-14 8 8 0 0 1-5.3 14Zm6-2 5 5",
+    shield: "M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6l-8-3Z",
+    rocket: "M5 15c3-7 8-11 16-12-1 8-5 13-12 16l-4-4Zm1 3-3 3 1-5m8-8 4 4",
+    chart: "M4 19V5m5 14v-8m5 8V8m5 11V3",
+    globe: "M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Zm-9-9h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18",
+    box: "M4 8 12 4l8 4-8 4-8-4Zm0 0v8l8 4 8-4V8M12 12v8",
+    check: "m4 12 5 5L20 6",
+    mail: "M4 6h16v12H4V6Zm0 0 8 7 8-7",
+    linkedin: "M6 9v10M6 5v.01M10 19v-6c0-2 1.2-3.5 3.2-3.5S17 10.9 17 13v6M10 9v10",
+    instagram: "M7 3h10a4 4 0 0 1 4 4v10a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4Zm5 5a4 4 0 1 0 0 8 4 4 0 0 0 0-8Zm5.5-1.5v.01",
+    facebook: "M15 8h-2a2 2 0 0 0-2 2v2H9v3h2v6h3v-6h2.5l.5-3h-3v-1.5c0-.8.4-1.5 1.4-1.5H17V6.2A9 9 0 0 0 15 6Z",
+    arrow: "M5 12h14m-6-6 6 6-6 6",
   };
-  return map[item] || item;
+
+  return (
+    <svg className="icon" viewBox="0 0 24 24" aria-hidden="true">
+      <path d={paths[name]} />
+    </svg>
+  );
+}
+
+export function PlatformLogo({ type }: { type: string }) {
+  if (type === "amazon") {
+    return (
+      <div className="market-logo amazon-logo">
+        amazon
+        <span />
+      </div>
+    );
+  }
+
+  return <div className="market-logo noon-logo">noon</div>;
+}
+
+export function Hero({
+  lang,
+  title,
+  subtitle,
+  image = "skyline",
+  eyebrow,
+}: {
+  lang: Lang;
+  title: string;
+  subtitle: string;
+  image?: keyof typeof imageMap;
+  eyebrow?: string;
+}) {
+  const t = copy[lang];
+
+  return (
+    <section className="hero" style={{ backgroundImage: `linear-gradient(115deg, rgba(6,24,50,.96), rgba(10,31,68,.66)), url(${imageMap[image]})` }}>
+      <div className="hero-inner">
+        <div className="hero-copy">
+          <p className="eyebrow">{eyebrow || (lang === "ar" ? "إطلاق العلامات في الخليج" : "Gulf marketplace launch engine")}</p>
+          <h1>{title}</h1>
+          <p>{subtitle}</p>
+          <div className="hero-actions">
+            <Link className="btn btn-gold" href={lang === "ar" ? "/ar/contact" : "/contact"}>
+              {t.partner}
+            </Link>
+            <Link className="btn btn-outline" href={lang === "ar" ? "/ar/how-it-works" : "/how-it-works"}>
+              {t.how}
+            </Link>
+          </div>
+          <span className="trust-line">{t.trusted}</span>
+          <div className="hero-proof" aria-label={lang === "ar" ? "دلائل الإطلاق" : "Launch proof points"}>
+            <span>{lang === "ar" ? "إطلاق خلال 30 يوماً" : "30-day launch"}</span>
+            <span>{lang === "ar" ? "بدون تكلفة مقدمة على العلامة" : "Zero upfront brand cost"}</span>
+            <span>{lang === "ar" ? "الإمارات + السعودية" : "UAE + KSA"}</span>
+          </div>
+        </div>
+        <div className="hero-dashboard" aria-hidden="true">
+          <div className="dash-orbit dash-orbit-one" />
+          <div className="dash-orbit dash-orbit-two" />
+          <div className="dash-card dash-card-main">
+            <span>{lang === "ar" ? "جاهزية الإطلاق" : "Launch readiness"}</span>
+            <strong>30</strong>
+            <small>{lang === "ar" ? "يوماً للوصول إلى السوق" : "days to market"}</small>
+          </div>
+          <div className="dash-card dash-card-amazon">
+            <PlatformLogo type="amazon" />
+            <small>{lang === "ar" ? "الإمارات + السعودية" : "UAE + KSA"}</small>
+          </div>
+          <div className="dash-card dash-card-noon">
+            <PlatformLogo type="noon" />
+            <small>{lang === "ar" ? "شبكة بائعين نشطة" : "Active seller network"}</small>
+          </div>
+          <div className="dash-rail">
+            <span />
+            <span />
+            <span />
+          </div>
+          <div className="dash-status">
+            <span />
+            {lang === "ar" ? "الإطلاق جار" : "Launch in motion"}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+export function Ticker({ lang }: { lang: Lang }) {
+  const items = [...copy[lang].ticker, ...copy[lang].ticker];
+
+  return (
+    <div className="ticker" aria-label="Marketplace capabilities">
+      <div className="ticker-track">
+        {items.map((item, index) => (
+          <span key={`${item}-${index}`}>
+            <Icon name={index % 2 ? "chart" : "globe"} />
+            {item}
+          </span>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+export function SectionHeader({ title, sub }: { title: string; sub?: string }) {
+  return (
+    <div className="section-head">
+      <h2>{title}</h2>
+      {sub && <p>{sub}</p>}
+    </div>
+  );
+}
+
+export function LogoWall({ lang }: { lang: Lang }) {
+  const [featured, ...rest] = brands;
+
+  return (
+    <div className="brand-showcase">
+      <article
+        className="brand-feature"
+        style={{ backgroundImage: `linear-gradient(100deg, rgba(6,24,50,.94), rgba(6,24,50,.58)), url(${brandImages[0]})` }}
+      >
+        <div className="brand-feature-logo">
+          <span>{featured.name.slice(0, 2).toUpperCase()}</span>
+          <strong>{featured.name}</strong>
+        </div>
+        <div>
+          <small>{lang === "ar" ? "علامة مميزة" : "Featured launch"}</small>
+          <h3>{lang === "ar" ? featured.arDesc : featured.desc}</h3>
+          <p>
+            {lang === "ar"
+              ? `${featured.arCategory} · ${featured.arCountry} · جاهزة للبيع في الخليج`
+              : `${featured.category} · ${featured.country} · Gulf marketplace ready`}
+          </p>
+        </div>
+      </article>
+      <div className="brand-wall">
+        {rest.map((brand) => (
+          <article className="brand-chip" key={brand.name}>
+            <span>{brand.name.slice(0, 2).toUpperCase()}</span>
+            <div>
+              <strong>{brand.name}</strong>
+              <small>{lang === "ar" ? brand.arCategory : brand.category}</small>
+            </div>
+            <em>{lang === "ar" ? brand.arCountry : brand.country}</em>
+          </article>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+export function BrandPortfolio({ lang }: { lang: Lang }) {
+  const isAr = lang === "ar";
+  const leadBrands = brands.slice(0, 4);
+  const remainingBrands = brands.slice(4);
+
+  return (
+    <div className="portfolio-showcase">
+      <div className="portfolio-lead">
+        <span className="portfolio-kicker">{isAr ? "محفظة الإطلاق الخليجية" : "Gulf launch portfolio"}</span>
+        <h3>
+          {isAr
+            ? "علامات مختارة مهيأة الآن للنمو في أسواق الخليج"
+            : "Selected brands now positioned for Gulf marketplace growth"}
+        </h3>
+        <p>
+          {isAr
+            ? "محفظة مختارة بعناية تغطي فئات الصحة والجمال والمنزل والرياضة والمطبخ ومستلزمات الأطفال."
+            : "A curated portfolio across health, beauty, home, sports, kitchen and baby categories."}
+        </p>
+        <div className="portfolio-metrics">
+          <span>
+            <strong>10</strong>
+            {isAr ? "علامات" : "Brands"}
+          </span>
+          <span>
+            <strong>6</strong>
+            {isAr ? "فئات" : "Categories"}
+          </span>
+          <span>
+            <strong>3-5</strong>
+            {isAr ? "إضافات شهرية" : "Monthly additions"}
+          </span>
+        </div>
+      </div>
+
+      <div className="portfolio-feature-grid">
+        {leadBrands.map((brand, index) => (
+          <article
+            className="portfolio-feature-card"
+            key={brand.name}
+            style={{ backgroundImage: `linear-gradient(180deg, rgba(6,24,50,.08), rgba(6,24,50,.82)), url(${brandImages[index]})` }}
+          >
+            <span>{isAr ? brand.arCategory : brand.category}</span>
+            <h4>{brand.name}</h4>
+            <p>{isAr ? brand.arDesc : brand.desc}</p>
+            <em>{isAr ? brand.arCountry : brand.country}</em>
+          </article>
+        ))}
+      </div>
+
+      <div className="portfolio-list">
+        {remainingBrands.map((brand) => (
+          <article className="portfolio-list-card" key={brand.name}>
+            <span>{brand.name.slice(0, 2).toUpperCase()}</span>
+            <div>
+              <h4>{brand.name}</h4>
+              <p>{isAr ? brand.arCategory : brand.category}</p>
+            </div>
+            <em>{isAr ? brand.arCountry : brand.country}</em>
+          </article>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+export function CTA({ lang, title, sub, button }: { lang: Lang; title?: string; sub?: string; button?: string }) {
+  const t = copy[lang];
+  const isAr = lang === "ar";
+
+  return (
+    <section className="cta-band">
+      <div className="cta-copy">
+        <span>{isAr ? "فرصة توسع خليجي" : "Gulf expansion opportunity"}</span>
+        <h2>{title || t.ctaTitle}</h2>
+        <p>{sub || t.ctaSub}</p>
+        <small>{t.ctaSmall}</small>
+        <div className="cta-actions">
+          <Link className="btn btn-gold" href={lang === "ar" ? "/ar/contact" : "/contact"}>
+            {button || t.partner}
+            <Icon name="arrow" />
+          </Link>
+          <Link className="btn btn-outline" href={lang === "ar" ? "/ar/how-it-works" : "/how-it-works"}>
+            {t.how}
+          </Link>
+        </div>
+      </div>
+      <div className="cta-visual" aria-hidden="true">
+        <div className="cta-ring" />
+        <div className="cta-market cta-market-amazon">
+          <PlatformLogo type="amazon" />
+          <span>UAE + KSA</span>
+        </div>
+        <div className="cta-market cta-market-noon">
+          <PlatformLogo type="noon" />
+          <span>{isAr ? "شبكة البائعين" : "Seller network"}</span>
+        </div>
+        <div className="cta-score">
+          <strong>30</strong>
+          <span>{isAr ? "يوم للإطلاق" : "day launch"}</span>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+export function Footer({ lang }: { lang: Lang }) {
+  const isAr = lang === "ar";
+
+  return (
+    <footer className="footer">
+      <div className="footer-grid">
+        <div>
+          <Logo lang={lang} />
+          <p>{isAr ? "شركة توزيع علامات دولية تطلق العلامات المثبتة على أمازون ونون في الإمارات والسعودية." : "Gulf brand distribution company launching proven global brands on Amazon and Noon across UAE and Saudi Arabia."}</p>
+          <div className="socials">
+            <a href="mailto:partnerships@nexuseventurescorp.com" aria-label="Email">
+              <Icon name="mail" />
+            </a>
+            <a href="https://www.linkedin.com" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+              <Icon name="linkedin" />
+            </a>
+            <a href="https://www.instagram.com" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+              <Icon name="instagram" />
+            </a>
+            <a href="https://www.facebook.com" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+              <Icon name="facebook" />
+            </a>
+          </div>
+        </div>
+        <div>
+          <h3>{isAr ? "روابط سريعة" : "Quick Links"}</h3>
+          {routes.map((route) => (
+            <Link key={route.href} href={isAr ? route.arHref : route.href}>
+              {isAr ? route.ar : route.en}
+            </Link>
+          ))}
+        </div>
+        <div>
+          <h3>{isAr ? "التواصل" : "Contact"}</h3>
+          <p>
+            <a href="mailto:info@nexuseventurescorp.com">info@nexuseventurescorp.com</a>
+          </p>
+          <p>
+            {isAr ? (
+              "واتساب: يضاف لاحقاً"
+            ) : (
+              <>
+                WhatsApp: <a href="https://wa.me/447737138827">+44 7737 138827</a>
+              </>
+            )}
+          </p>
+          <p>
+            <a href="https://www.nexuseventurescorp.com" target="_blank" rel="noopener noreferrer">
+              www.nexuseventurescorp.com
+            </a>
+          </p>
+        </div>
+        <div>
+          <h3>{isAr ? "الأسواق" : "Markets"}</h3>
+          <p>{isAr ? "الإمارات | السعودية | المملكة المتحدة | كندا" : "UAE | KSA | United Kingdom | Canada"}</p>
+          <div className="mini-platforms">
+            {platformLogos.map((platform) => (
+              <PlatformLogo key={platform.name} type={platform.kind} />
+            ))}
+          </div>
+        </div>
+      </div>
+      <div className="footer-bottom">
+        <span>Nexus eVentures Corporation Ltd. Registered in England & Wales No. 15599446. VAT: 467 2495 57</span>
+        <span>© 2026 Nexus eVentures Corporation. All rights reserved.</span>
+      </div>
+    </footer>
+  );
+}
+
+export function PageIntro({ children }: { children: React.ReactNode }) {
+  return <main className="page-main">{children}</main>;
 }
