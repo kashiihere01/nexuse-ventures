@@ -385,11 +385,17 @@ export function Footer({ lang }: { lang: Lang }) {
           ))}
         </div>
         <div>
-          <h3>{isAr ? "التواصل" : "Contact"}</h3>
-          <p>info@nexuseventurescorp.com</p>
-          <p>{isAr ? "واتساب: يضاف لاحقاً" : "WhatsApp: +44 7737 138827"}</p>
-          <p>www.nexuseventurescorp.com</p>
-        </div>
+  <h3>{isAr ? "التواصل" : "Contact"}</h3>
+  <p><a href="mailto:info@nexuseventurescorp.com">info@nexuseventurescorp.com</a></p>
+  <p>
+    {isAr ? (
+      "واتساب: يضاف لاحقاً"
+    ) : (
+      <a href="https://wa.me/447737138827">WhatsApp: +44 7737 138827</a>
+    )}
+  </p>
+  <p><a href="https://www.nexuseventurescorp.com" target="_blank" rel="noopener noreferrer">www.nexuseventurescorp.com</a></p>
+</div>
         <div>
           <h3>{isAr ? "الأسواق" : "Markets"}</h3>
           <p>{isAr ? "الإمارات | السعودية | المملكة المتحدة | كندا" : "UAE | KSA | United Kingdom | Canada"}</p>
