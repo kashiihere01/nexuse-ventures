@@ -235,24 +235,11 @@ export function LegacyContactPage({ lang }: { lang: Lang }) {
         <section className="contact-grid">
           <div className="contact-card">
             <h2>{ar ? "بيانات التواصل" : "Contact Details"}</h2>
-            <p>
-              <strong>Email:</strong> <a href="mailto:info@nexuseventurescorp.com">info@nexuseventurescorp.com</a>
-            </p>
-            <p>
-              <strong>{ar ? "واتساب:" : "WhatsApp:"}</strong>{" "}
-              {ar ? "يضاف لاحقاً" : <a href="https://wa.me/447737138827">+44 7737 138827</a>}
-            </p>
+            <p><strong>Email:</strong> info@nexuseventurescorp.com</p>
+            <p><strong>{ar ? "واتساب:" : "WhatsApp:"}</strong> {ar ? "يضاف لاحقاً" : "+44 7737 138827"}</p>
             <p><strong>UK Company:</strong> Nexus eVentures Corporation Ltd</p>
             <p><strong>VAT:</strong> GB 467 2495 57</p>
-            <p>
-              <a
-                href="https://www.google.com/maps/search/?api=1&query=151+Lapage+Street,+Bradford,+England,+BD3+8AF"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                151 Lapage Street, Bradford, England, BD3 8AF
-              </a>
-            </p>
+            <p>151 Lapage Street, Bradford, England, BD3 8AF</p>
             <div className="mini-platforms">
               {platformLogos.map((platform) => <PlatformLogo key={platform.name} type={platform.kind} />)}
             </div>
